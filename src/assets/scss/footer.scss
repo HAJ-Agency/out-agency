@@ -1,0 +1,41 @@
+// --Footer SCSS-- //
+footer {
+  .linkedin-frame {
+    width: 288px;
+    height: 162px;
+    transform: rotate(6deg);
+    .linkedin-link-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        padding-bottom: 2px;
+      }
+    }
+    @media (max-width: 900px) {
+      padding-right: 20px;
+    }
+  }
+  .footer-small-links {
+    justify-content: end;
+    @media (max-width: 782px) {
+      justify-content: start;
+      padding-top: 8px;
+    }
+    a {
+      text-transform: capitalize;
+    }
+  }
+  @media (max-width: 900px) {
+    .wp-block-navigation__container {
+      display: block;
+    }
+    .linkedin-column {
+      flex-basis: 50% !important;
+    }
+  }
+}
+// removes margin before footer element //
+:where(.wp-site-blocks) > * {
+  margin-block-start: 0 !important;
+}

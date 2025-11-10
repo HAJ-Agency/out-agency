@@ -1,0 +1,1 @@
+(()=>{var e;(e=jQuery)(function(){new Swiper(".scrollbar-slider",{direction:"horizontal",slidesPerView:e(".scrollbar-slider").data("posts-per-view-mobile")||1,spaceBetween:10,scrollbar:{el:".swiper-scrollbar",draggable:!0},breakpoints:{640:{slidesPerView:e(".scrollbar-slider").data("posts-per-view-desktop")||2}}})})})();

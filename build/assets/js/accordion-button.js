@@ -1,0 +1,1 @@
+(()=>{var e;(e=jQuery)(function(){e(".accordion").accordion({collapsible:!0,header:".fixed-button",active:!1}),e(document).on("click",".fixed-button",function(o){o.preventDefault(),e(this).toggleClass("is-open")})})})();

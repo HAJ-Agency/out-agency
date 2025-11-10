@@ -1,0 +1,12 @@
+section {
+   &.wp-block-group {
+      > *:not(.image-is-watermark):not([data-is-watermark="true"]) {
+         position: relative;
+         z-index: 2;
+      }
+      // below 782 pixels
+      @media (max-width: 782px) {
+         background-image: none !important;
+      }
+   }
+}

@@ -1,0 +1,1 @@
+section.wp-block-group>:not(.image-is-watermark):not([data-is-watermark=true]){position:relative;z-index:2}@media(max-width:782px){section.wp-block-group{background-image:none!important}}

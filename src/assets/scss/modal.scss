@@ -1,0 +1,132 @@
+@use "mixins" as *;
+
+// Modal SCSS //
+.modal-container {
+  position: relative;
+  .modal-button, .modal-button-black {
+    cursor: pointer;
+    @media (max-width: 540px) {
+      font-size: 16px !important;
+    }
+    &:after {
+      @include psuedo;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      right: 32px;
+      @media (max-width: 540px) {
+        width: 16px;
+        height: 16px;
+        right: 0;
+      }
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M4 12H20M12 4V20' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+  .modal-button-black {
+    cursor: pointer;
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H13V3Z' fill='%23111111'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+  .modal-content {
+    display: none;
+  }
+}
+
+.wp-container-core-columns-is-layout-e5962b62 div {
+  @media (max-width: 420px) {
+    padding: 0 !important;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  margin: 0 !important;
+}
+
+.modal-textbox,
+.modal-textbox-black {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  width: 90%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin: 0 !important;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    padding-right: 20%;
+  }
+}
+
+.modal-textbox-black {
+  background: #111111;
+  color: #ffffff;
+
+  h3 {
+    color: #ffffff;
+  }
+}
+
+.modal-close,
+.modal-close-black {
+  position: absolute;
+  @include psuedo;
+  top: 32px;
+  right: 32px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none !important;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M19 5L4.99998 19M5.00001 5L19 19' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+.modal-close-black {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M19 5L4.99998 19M5.00001 5L19 19' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ui-dialog-titlebar-close {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.wp-container-core-columns-is-layout-24d2ec07 {
+  @media (max-width: 1100px) {
+    display: block !important;
+    p {
+      padding-top: 32px;
+    }
+  }
+}
+
+.wp-container-core-columns-is-layout-e5962b62 {
+  @media (max-width: 955px) {
+    display: block !important;
+    .wp-block-column {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+}

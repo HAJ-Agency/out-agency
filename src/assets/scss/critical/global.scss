@@ -1,0 +1,807 @@
+@use "../mixins" as *;
+
+// --General SCSS-- //
+@media (max-width: 1440px) {
+  .content-margin-mobile,
+  .background-img .wp-block-cover__inner-container,
+  .contact-us-background .wp-block-cover__inner-container,
+  .three-steps-wrapper .wp-block-group {
+    margin-right: 32px !important;
+    margin-left: 32px !important;
+
+    @media (max-width: 500px) {
+      margin-right: 16px !important;
+      margin-left: 16px !important;
+    }
+  }
+  .content-padding-mobile {
+    padding-right: 32px !important;
+    padding-left: 32px !important;
+
+    @media (max-width: 500px) {
+      padding-right: 16px !important;
+      padding-left: 16px !important;
+    }
+  }
+}
+
+.circle-frame-404 {
+  width: 162px;
+  height: 91px;
+  transform: rotate(6deg);
+  p {
+    position: relative;
+    top: -6px;
+    left: 7px;
+    display: inline-block;
+  }
+  @media (max-width: 1440px) {
+    p {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.p-404 {
+  @media (max-width: 480px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.wp-block-image img {
+  border-radius: 8px;
+}
+
+.style-svg img {
+  border-radius: 0;
+}
+
+// SCSS to link cover image to its post //
+.link-to-post-wrapper {
+  position: relative;
+  .link-cover-to-post {
+    font-size: 16px;
+    width: 100vw;
+    height: 640px !important;
+    position: absolute;
+    top: -13px;
+    right: 0;
+    left: -32px;
+    bottom: 0;
+    z-index: 3;
+    background: transparent;
+    pointer-events: auto;
+  }
+  .link-cover-to-post-small {
+    font-size: 16px;
+    width: 676px;
+    height: 430px !important;
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: -32px;
+    bottom: 0;
+    z-index: 3;
+    background: transparent;
+    pointer-events: auto;
+  }
+}
+
+// featured image hover effect //
+.featured-image-hover {
+  height: 512px;
+  width: 576px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  @include transition;
+  .featured-image-hover-content {
+    svg {
+      height: 80px;
+      width: auto;
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.featured-image-with-hover {
+  position: relative;
+  &:hover {
+    .featured-image-hover {
+      visibility: visible !important;
+      opacity: 1 !important;
+      @include transition;
+    }
+  }
+  @media (max-width: 550px) {
+    &:hover {
+      .featured-image-hover {
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+    }
+  }
+}
+
+// Styling for categories on top of image //
+.featured-image-with-tag {
+  height: 640px;
+}
+
+.category-tag {
+  .tags-wrapper {
+    height: 24px;
+    columns: 1;
+    z-index: 4;
+    span {
+      display: inline-flex;
+      align-items: center;
+      box-sizing: border-box;
+      line-height: 1;
+      letter-spacing: 0.96px;
+      height: 24px;
+      font-size: 12px;
+      text-transform: uppercase;
+      background-color: #ffffff;
+      color: #111111;
+      padding-top: 6px;
+      padding-left: 24px;
+      padding-bottom: 6px;
+      padding-right: 8px;
+      margin: 0;
+      border-radius: 2px;
+      width: fit-content;
+      z-index: 4;
+      &:before {
+        @include psuedo;
+        height: 8px;
+        width: 8px;
+        opacity: 1;
+        border-radius: 50px;
+        background-color: #111111;
+        top: 32px;
+        left: 8px;
+        z-index: 4;
+      }
+    }
+  }
+}
+
+// Styling for tags in Workations and Customer Cases //
+.tags-wrapper {
+  columns: 2;
+  gap: 16px;
+}
+
+// text style for tags //
+.has-extra-small-font-size {
+  line-height: 1;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+}
+
+.wp-container-core-group-is-layout-27734df2,
+.wp-container-core-group-is-layout-66336762 {
+  @media (max-width: 1030px) {
+    display: block !important;
+    .tags-wrapper {
+      padding-top: 8px;
+    }
+  }
+}
+
+// block with background image and blur effect //
+.background-img,
+.contact-us-background {
+  width: 100vw !important;
+  height: auto;
+  background-size: cover;
+  position: static !important;
+  .text-overlay,
+  .contact-us-overlay {
+    border-radius: 8px;
+    background: rgba(255, 250, 243, 0.01);
+    backdrop-filter: blur(50px);
+  }
+}
+
+#frm_field_6_container {
+  margin-bottom: 0 !important;
+}
+
+// scroll effect on small archives //
+.small-archive-preview {
+  li {
+    animation: fade-in-out ease-in-out 1s;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+// -- Services Archive SCSS -- //
+// Service image SCSS //
+.wp-post-image {
+  border-radius: 8px;
+}
+
+.service-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.read-more-wrapper {
+  margin-top: auto;
+}
+
+.services-banner-img {
+  img {
+    border-radius: 8px;
+    width: 100vw;
+    height: 384px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 890px) {
+  .service-archive-mobile {
+    display: block !important;
+    img {
+      border-radius: 8px;
+      width: 100vw;
+      height: 512px;
+      object-fit: cover;
+    }
+    .read-more-wrapper {
+      margin: 32px 0;
+    }
+  }
+  .services-banner-img {
+    img {
+      border-radius: 8px;
+      width: 100vw;
+      height: 448px;
+      object-fit: cover;
+    }
+  }
+}
+
+// --Startpage SCSS-- //
+.big-heading {
+  @media (max-width: 1000px) {
+    margin-top: 145px !important;
+    margin-bottom: 145px !important;
+    p {
+      @media (max-width: 600px) {
+        padding: 0 16px !important;
+      }
+    }
+  }
+}
+
+// SCSS for services cards //
+.service-card {
+  li {
+    height: 390px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease-in-out;
+    .service-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      h6 {
+        margin: 0;
+        height: 50px;
+      }
+      .title-divider {
+        svg {
+          max-width: 100%;
+          width: auto;
+          height: auto;
+        }
+      }
+      .read-more-arrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: auto !important;
+        width: 100%;
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M6 12H18M18 12L13 7M18 12L13 17' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+          background-size: contain;
+          background-repeat: no-repeat;
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+    }
+    &:hover {
+      background-color: #ffffff;
+      color: #111111;
+      .read-more-arrow {
+        &:after {
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M6 12H18M18 12L13 7M18 12L13 17' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+          transform: translateX(140px);
+        }
+      }
+      .title-divider {
+        svg path {
+          fill: #111111;
+        }
+      }
+    }
+  }
+}
+
+// SCSS for partners banner/images //
+.startpage-row {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  .wp-block-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  @media (max-width: 1090px) {
+    padding: 0;
+    flex-wrap: wrap !important;
+    display: block;
+    .wp-block-group {
+      display: flex;
+      padding: 32px 16px;
+      flex-wrap: wrap !important;
+      gap: 16px;
+      figure {
+        padding: 16px;
+        @media (max-width: 550px) {
+          padding: 10px;
+        }
+        img {
+          width: 175px;
+          height: 75px;
+          @media (max-width: 550px) {
+            width: 150px;
+            height: 75px;
+          }
+          @media (max-width: 470px) {
+            width: 110px;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+  .partners-title {
+    padding: 64px 32px;
+    white-space: nowrap;
+    @media (max-width: 1090px) {
+      width: 100%;
+    }
+    @media (max-width: 390px) {
+      width: 100%;
+      font-size: var(--wp--preset--font-size--h-5);
+    }
+  }
+}
+
+// SCSS for scroll animation for customer cases //
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.customer-cases-featured li {
+  animation: fade-in-out ease-in-out 1s;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+}
+
+.customer-cases-grid {
+  @media (max-width: 800px) {
+    display: block !important;
+    .text-group {
+      padding-bottom: 80px;
+      h4 {
+        font-size: 32px !important;
+      }
+    }
+  }
+  li,
+  .text-group {
+    animation: fade-in-out ease-in-out 1s;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+// SCSS for scroll animation for three steps //
+@keyframes switch-color {
+  from {
+    background-color: #fffaf3;
+    color: #111111;
+  }
+  to {
+    background-color: #111111;
+    color: #ffffff;
+  }
+}
+
+@keyframes switch-color2 {
+  from {
+    background-color: #111111;
+    color: #ffffff;
+  }
+  to {
+    background-color: #ffffff;
+    color: #111111;
+  }
+}
+
+@keyframes switch-heading-color {
+  from {
+    color: #ffffff;
+  }
+  to {
+    color: #111111;
+  }
+}
+
+
+@keyframes switch-fill {
+  from {
+    fill: #ffffff;
+  }
+  to {
+    fill: #111111;
+  }
+}
+
+// SCSS for three steps part of startpage //
+.three-steps-wrapper {
+  animation: switch-color ease-in forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  h2 {
+    color: inherit;
+  }
+  .step-card {
+    color: #ffffff;
+    width: 437px;
+    height: 437px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: switch-color2 ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    .step-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      svg {
+        width: 106px !important;
+        height: 60px !important;
+        margin: auto !important;
+        path {
+          animation: switch-fill ease-in forwards;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
+        }
+      }
+      h6 {
+        padding-top: 20px;
+        animation: switch-heading-color ease-in forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+    }
+    h4 {
+      animation: switch-heading-color ease-in forwards;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+    @media (max-width: 1065px) {
+      padding: 16px !important;
+      h4 {
+        font-size: var(--wp--preset--font-size--h-6);
+      }
+      @media (max-width: 550px) {
+        width: 294px !important;
+        height: 326px !important;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    animation-range: entry 0% cover 20%;
+    .wp-block-columns {
+      display: block !important;
+      .step-card {
+        margin: auto !important;
+        margin-bottom: 16px !important;
+        h6 {
+          padding-top: 10px;
+        }
+      }
+    }
+    @media (max-width: 700px) {
+      animation: none;
+      .step-card {
+        animation: none;
+        background-color: #111111;
+        color: #ffffff;
+        h4 {
+          color: #ffffff;
+          animation: none;
+        }
+        .step-frame {
+          svg path {
+            animation: none;
+            fill: #ffffff;
+          }
+          h6 {
+            color: #ffffff;
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --Contact us page AND About page SCSS-- //
+.contact-us-overlay {
+  .wp-container-core-columns-is-layout-6b440324 {
+    @media (max-width: 1060px) {
+      flex-direction: column;
+
+      .wp-image-388 {
+        width: 100vw;
+      }
+
+      @media (max-width: 630px) {
+        p {
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .contact-us-info-columns {
+      @media (max-width: 1060px) {
+        .wp-block-column {
+          flex-basis: 0 !important;
+          @media (max-width: 555px) {
+            flex-basis: 100% !important;
+            margin-bottom: 32px;
+          }
+        }
+      }
+      .contact-us-info {
+        a {
+          text-transform: lowercase;
+          line-height: 140%;
+          letter-spacing: 0.16px;
+          font-size: 16px;
+        }
+      }
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.about-hero {
+  @media (max-width: 900px) {
+    img {
+      border-radius: 8px;
+      width: 100vw;
+      height: 448px;
+      object-fit: cover;
+    }
+    .wp-container-core-group-is-layout-211e9e47 {
+      @media (max-width: 600px) {
+        padding: 0 16px !important;
+      }
+    }
+  }
+}
+
+.about-individual-wrapper {
+  position: relative;
+  .about-individual {
+    height: 512px;
+    position: relative;
+    .about-individual-hover {
+      height: 512px;
+      max-height: 512px;
+      opacity: 0;
+      z-index: 3;
+      @include transition;
+    }
+    &:hover {
+      .about-individual-hover {
+        opacity: 1;
+        @include transition;
+      }
+    }
+  }
+  .individual-name {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    z-index: 2;
+  }
+}
+
+.black-circle-frame {
+  width: 162px;
+  height: 91px;
+  p {
+    position: relative;
+    top: -6px;
+    left: 7px;
+    display: inline-block;
+    transform: rotate(6deg);
+  }
+  @media (max-width: 1440px) {
+    p {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.white-circle-frame {
+  width: 121px;
+  height: 68px;
+}
+
+// --Single page customer case SCSS-- //
+.featured-image-single-page {
+  height: 640px;
+  overflow: visible;
+  z-index: 1;
+  .logo-single-page {
+    svg {
+      z-index: 3;
+      display: block !important;
+      height: 130px !important;
+      width: auto;
+      path {
+        fill: #ffffff !important;
+      }
+    }
+  }
+}
+
+// makes single image take up full content width //
+.single-page-image {
+  img {
+    width: 100vw;
+  }
+}
+
+// make columns same height //
+.column-wrapper {
+  display: flex;
+  .column-div {
+    div {
+      height: 600px;
+
+      .wp-elements-377f1eb0eefda924363f1e96b1a8d3cd li {
+        @media (max-width: 400px) {
+          font-size: 16px;
+        }
+      }
+    }
+    figure {
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+}
+
+// --Single page Service SCSS-- //
+.service-columns {
+  .wp-block-column {
+    width: 437px;
+    height: 437px;
+    max-height: 437px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+// --Featured/Active workation single page SCSS-- //
+.featured-post-gallery {
+  img {
+    width: 100vw;
+    height: 512px;
+    object-fit: cover;
+  }
+}
+
+.featured-post-fixed-wrapper {
+  position: relative;
+  .featured-post-fixed {
+    position: sticky;
+    top: 96px;
+  }
+}
+
+// --Workation single page SCSS-- //
+.workation-gallery {
+  @media (max-width: 781px) {
+    .wp-block-image {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .wp-block-image img {
+      margin: 0 auto;
+    }
+  }
+
+  .image-gallery-column1 {
+    img {
+      width: 437px;
+      height: 437px;
+      object-fit: cover;
+    }
+  }
+  
+  .image-gallery-column2 {
+    figure {
+      &:nth-child(1),
+      &:nth-child(2) {
+        img {
+          width: 437px;
+          height: 246px;
+          object-fit: cover;
+        }
+      }
+      &:nth-child(3) {
+        img {
+          width: 437px;
+          height: 437px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+  .image-gallery-column3 {
+    img {
+      width: 437px;
+      height: 437px;
+      object-fit: cover;
+    }
+  }
+}
+

@@ -1,0 +1,1 @@
+.wp-block-image.image-is-watermark,.wp-block-image[data-is-watermark=true]{left:calc(50% + var(--watermark-position-x, 0)*.5%);opacity:var(--watermark-opacity,1);pointer-events:none;position:absolute;top:calc(50% + var(--watermark-position-y, 0)*.5%);transform:translate(-50%,-50%);width:-moz-max-content;width:max-content;z-index:1}

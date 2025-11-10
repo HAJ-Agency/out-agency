@@ -1,0 +1,1 @@
+(()=>{var t;(t=jQuery)(function(){t('[style*="min-height"]').each(function(){var t=this.getAttribute("style"),e=t.replace(/min-height\s*:\s*(\d+(\.\d+)?)vh/gi,function(t,e){return"min-height:calc("+.01*window.innerHeight*e+"px - var(--header-height))"});t!==e&&this.setAttribute("style",e)})})})();

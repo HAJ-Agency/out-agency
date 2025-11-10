@@ -1,0 +1,748 @@
+{
+  "version": 3,
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "settings": {
+    "layout": {
+      "contentSize": "86rem",
+      "wideSize": "90rem"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "name": "Transparent",
+          "slug": "transparent",
+          "color": "transparent"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#111111"
+        },
+        {
+          "name": "Black 2",
+          "slug": "black-2",
+          "color": "#1A1A1A"
+        },
+        {
+          "name": "Cream",
+          "slug": "cream",
+          "color": "#FFFAF3"
+        }
+      ]
+    },
+    "spacing": {
+      "blockGap": true,
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        {
+          "name": "auto",
+          "size": "auto",
+          "slug": "auto"
+        },
+        {
+          "name": "0.25rem",
+          "size": "0.25rem",
+          "slug": "0-25"
+        },
+        {
+          "name": "0.5rem",
+          "size": "0.5rem",
+          "slug": "0-50"
+        },
+        {
+          "name": "0.75rem",
+          "size": "0.75rem",
+          "slug": "0-75"
+        },
+        {
+          "name": "1rem",
+          "size": "1rem",
+          "slug": "1"
+        },
+        {
+          "name": "1.25rem",
+          "size": "clamp(0.75rem, 0.393rem + 0.952vw, 1.25rem)",
+          "slug": "1-25"
+        },
+        {
+          "name": "1.5rem",
+          "size": "clamp(1rem, 0.643rem + 0.952vw, 1.5rem)",
+          "slug": "1-50"
+        },
+        {
+          "name": "1.75rem",
+          "size": "clamp(1rem, 0.464rem + 1.429vw, 1.75rem)",
+          "slug": "1-75"
+        },
+        {
+          "name": "2rem",
+          "size": "clamp(1.5rem, 1.143rem + 0.952vw, 2rem)",
+          "slug": "2"
+        },
+        {
+          "name": "2.25rem",
+          "size": "clamp(1.5rem, 0.964rem + 1.429vw, 2.25rem)",
+          "slug": "2-25"
+        },
+        {
+          "name": "2.5rem",
+          "size": "clamp(1.5rem, 0.786rem + 1.905vw, 2.5rem)",
+          "slug": "2-50"
+        },
+        {
+          "name": "2.75rem",
+          "size": "clamp(1.5rem, 0.607rem + 2.381vw, 2.75rem)",
+          "slug": "2-75"
+        },
+        {
+          "name": "3rem",
+          "size": "clamp(2rem, 1.286rem + 1.905vw, 3rem)",
+          "slug": "3"
+        },
+        {
+          "name": "3.25rem",
+          "size": "clamp(2rem, 1.107rem + 2.381vw, 3.25rem)",
+          "slug": "3-25"
+        },
+        {
+          "name": "3.5rem",
+          "size": "clamp(2rem, 0.929rem + 2.857vw, 3.5rem)",
+          "slug": "3-50"
+        },
+        {
+          "name": "3.75rem",
+          "size": "clamp(2rem, 0.750rem + 3.333vw, 3.75rem)",
+          "slug": "3-75"
+        },
+        {
+          "name": "4rem",
+          "size": "clamp(3rem, 2.286rem + 1.905vw, 4rem)",
+          "slug": "4"
+        },
+        {
+          "name": "4.25rem",
+          "size": "clamp(3rem, 2.107rem + 2.381vw, 4.25rem)",
+          "slug": "4-25"
+        },
+        {
+          "name": "4.5rem",
+          "size": "clamp(3rem, 1.929rem + 2.857vw, 4.5rem)",
+          "slug": "4-50"
+        },
+        {
+          "name": "4.75rem",
+          "size": "clamp(3rem, 1.750rem + 3.333vw, 4.75rem)",
+          "slug": "4-75"
+        },
+        {
+          "name": "5rem",
+          "size": "clamp(3rem, 1.571rem + 3.81vw, 5rem)",
+          "slug": "5"
+        },
+        {
+          "name": "5.25rem",
+          "size": "clamp(3rem, 1.393rem + 4.286vw, 5.25rem)",
+          "slug": "5-25"
+        },
+        {
+          "name": "5.5rem",
+          "size": "clamp(3rem, 1.214rem + 4.762vw, 5.5rem)",
+          "slug": "5-50"
+        },
+        {
+          "name": "5.75rem",
+          "size": "clamp(3rem, 1.036rem + 5.238vw, 5.75rem)",
+          "slug": "5-75"
+        },
+        {
+          "name": "6rem",
+          "size": "clamp(3rem, 0.857rem + 5.714vw, 6rem)",
+          "slug": "6"
+        },
+        {
+          "name": "6.25rem",
+          "size": "clamp(3rem, 0.679rem + 6.19vw, 6.25rem)",
+          "slug": "6-25"
+        },
+        {
+          "name": "6.5rem",
+          "size": "clamp(3rem, 0.500rem + 6.667vw, 6.5rem)",
+          "slug": "6-50"
+        },
+        {
+          "name": "6.75rem",
+          "size": "clamp(3rem, 0.321rem + 7.143vw, 6.75rem)",
+          "slug": "6-75"
+        },
+        {
+          "name": "7rem",
+          "size": "clamp(3rem, 0.143rem + 7.619vw, 7rem)",
+          "slug": "7"
+        },
+        {
+          "name": "7.25rem",
+          "size": "clamp(3rem, -0.036rem + 8.095vw, 7.25rem)",
+          "slug": "7-25"
+        },
+        {
+          "name": "7.5rem",
+          "size": "clamp(3rem, -0.214rem + 8.571vw, 7.5rem)",
+          "slug": "7-50"
+        },
+        {
+          "name": "7.75rem",
+          "size": "clamp(3rem, -0.393rem + 9.048vw, 7.75rem)",
+          "slug": "7-75"
+        },
+        {
+          "name": "8rem",
+          "size": "clamp(3rem, -0.571rem + 9.524vw, 8rem)",
+          "slug": "8"
+        },
+        {
+          "name": "8.25rem",
+          "size": "clamp(3rem, -0.750rem + 10vw, 8.25rem)",
+          "slug": "8-25"
+        },
+        {
+          "name": "8.5rem",
+          "size": "clamp(3rem, -0.929rem + 10.476vw, 8.5rem)",
+          "slug": "8-50"
+        },
+        {
+          "name": "8.75rem",
+          "size": "clamp(3rem, -1.107rem + 10.952vw, 8.75rem)",
+          "slug": "8-75"
+        },
+        {
+          "name": "9rem",
+          "size": "clamp(3rem, -1.286rem + 11.429vw, 9rem)",
+          "slug": "9"
+        },
+        {
+          "name": "9.25rem",
+          "size": "clamp(3rem, -1.464rem + 11.905vw, 9.25rem)",
+          "slug": "9-25"
+        },
+        {
+          "name": "9.5rem",
+          "size": "clamp(3rem, -1.643rem + 12.381vw, 9.5rem)",
+          "slug": "9-50"
+        },
+        {
+          "name": "9.75rem",
+          "size": "clamp(3rem, -1.821rem + 12.857vw, 9.75rem)",
+          "slug": "9-75"
+        },
+        {
+          "name": "10rem",
+          "size": "clamp(3rem, -2rem + 13.333vw, 10rem)",
+          "slug": "10"
+        },
+        {
+          "name": "10.25rem",
+          "size": "clamp(3rem, -2.179rem + 13.81vw, 10.25rem)",
+          "slug": "10-25"
+        },
+        {
+          "name": "10.5rem",
+          "size": "clamp(3rem, -2.357rem + 14.286vw, 10.5rem)",
+          "slug": "10-50"
+        },
+        {
+          "name": "10.75rem",
+          "size": "clamp(3rem, -2.536rem + 14.762vw, 10.75rem)",
+          "slug": "10-75"
+        },
+        {
+          "name": "11rem",
+          "size": "clamp(5rem, 0.714rem + 11.429vw, 11rem)",
+          "slug": "11"
+        },
+        {
+          "name": "11.25rem",
+          "size": "clamp(5rem, 0.536rem + 11.905vw, 11.25rem)",
+          "slug": "11-25"
+        },
+        {
+          "name": "11.5rem",
+          "size": "clamp(5rem, 0.357rem + 12.381vw, 11.5rem)",
+          "slug": "11-50"
+        },
+        {
+          "name": "11.75rem",
+          "size": "clamp(5rem, 0.179rem + 12.857vw, 11.75rem)",
+          "slug": "11-75"
+        },
+        {
+          "name": "12rem",
+          "size": "clamp(5rem, 0rem + 13.333vw, 12rem)",
+          "slug": "12"
+        },
+        {
+          "name": "12.25rem",
+          "size": "clamp(5rem, -0.179rem + 13.81vw, 12.25rem)",
+          "slug": "12-25"
+        },
+        {
+          "name": "12.5rem",
+          "size": "clamp(5rem, -0.357rem + 14.286vw, 12.5rem)",
+          "slug": "12-50"
+        },
+        {
+          "name": "12.75rem",
+          "size": "clamp(5rem, -0.536rem + 14.762vw, 12.75rem)",
+          "slug": "12-75"
+        },
+        {
+          "name": "13rem",
+          "size": "clamp(5rem, -0.714rem + 15.238vw, 13rem)",
+          "slug": "13"
+        },
+        {
+          "name": "13.25rem",
+          "size": "clamp(5rem, -0.893rem + 15.714vw, 13.25rem)",
+          "slug": "13-25"
+        },
+        {
+          "name": "13.5rem",
+          "size": "clamp(5rem, -1.071rem + 16.19vw, 13.5rem)",
+          "slug": "13-50"
+        },
+        {
+          "name": "13.75rem",
+          "size": "clamp(5rem, -1.25rem + 16.667vw, 13.75rem)",
+          "slug": "13-75"
+        },
+        {
+          "name": "14rem",
+          "size": "clamp(5rem, -1.429rem + 17.143vw, 14rem)",
+          "slug": "14"
+        },
+        {
+          "name": "14.25rem",
+          "size": "clamp(5rem, -1.607rem + 17.619vw, 14.25rem)",
+          "slug": "14-25"
+        },
+        {
+          "name": "14.5rem",
+          "size": "clamp(5rem, -1.786rem + 18.095vw, 14.5rem)",
+          "slug": "14-50"
+        },
+        {
+          "name": "14.75rem",
+          "size": "clamp(5rem, -1.964rem + 18.571vw, 14.75rem)",
+          "slug": "14-75"
+        },
+        {
+          "name": "15rem",
+          "size": "clamp(5rem, -2.143rem + 19.048vw, 15rem)",
+          "slug": "15"
+        },
+        {
+          "name": "24rem",
+          "size": "clamp(5rem, -8.571rem + 36.19vw, 24rem)",
+          "slug": "24"
+        },
+        {
+          "name": "Global Padding",
+          "size": "clamp(1rem, 0.375rem + 1.667vw, 1.875rem)",
+          "slug": "global-padding"
+        }
+      ],
+      "spacingScale": {
+        "steps": 1
+      },
+      "units": ["%", "px", "em", "rem", "vh", "vw"]
+    },
+    "typography": {
+      "fluid": {
+        "minFontSize": "0.625rem"
+      },
+      "writingMode": false,
+      "defaultFontSizes": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "PP Pangaia, serif",
+          "name": "PP Pangaia",
+          "slug": "heading",
+          "fontFace": [
+            {
+              "fontFamily": "PP Pangaia",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": ["file:./includes/fonts/PPPangaia-Bold.otf"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "Satoshi, sans-serif",
+          "name": "Satoshi",
+          "slug": "body",
+          "fontFace": [
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "900",
+              "src": ["file:./includes/fonts/Satoshi-Black.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "900",
+              "src": ["file:./includes/fonts/Satoshi-BlackItalic.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": ["file:./includes/fonts/Satoshi-Bold.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "700",
+              "src": ["file:./includes/fonts/Satoshi-BoldItalic.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "400",
+              "src": ["file:./includes/fonts/Satoshi-Italic.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "300",
+              "src": ["file:./includes/fonts/Satoshi-Light.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "300",
+              "src": ["file:./includes/fonts/Satoshi-LightItalic.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": ["file:./includes/fonts/Satoshi-Medium.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "500",
+              "src": ["file:./includes/fonts/Satoshi-MediumItalic.otf"]
+            },
+            {
+              "fontFamily": "Satoshi",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./includes/fonts/Satoshi-Regular.otf"]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Big Heading",
+          "slug": "big-heading",
+          "size": "14rem",
+          "fluid": {
+            "min": "4rem",
+            "max": "14rem"
+          }
+        },
+        {
+          "name": "H1",
+          "slug": "h1",
+          "size": "6.25rem",
+          "fluid": {
+            "min": "3rem",
+            "max": "6.25rem"
+          }
+        },
+        {
+          "name": "H2",
+          "slug": "h2",
+          "size": "5rem",
+          "fluid": {
+            "min": "2.5rem",
+            "max": "5rem"
+          }
+        },
+        {
+          "name": "H3",
+          "slug": "h3",
+          "size": "2.5rem",
+          "fluid": {
+            "min": "1.5rem",
+            "max": "2.5rem"
+          }
+        },
+        {
+          "name": "H4",
+          "slug": "h4",
+          "size": "2rem",
+          "fluid": {
+            "min": "1.5rem",
+            "max": "2rem"
+          }
+        },
+        {
+          "name": "H5",
+          "slug": "h5",
+          "size": "1.5rem",
+          "fluid": {
+            "min": "1.25rem",
+            "max": "1.5rem"
+          }
+        },
+        {
+          "name": "H6",
+          "slug": "h6",
+          "size": "1.25rem",
+          "fluid": false
+        },
+        {
+          "name": "Paragraph L",
+          "slug": "paragraph-l",
+          "size": "1.125rem",
+          "fluid": false
+        },
+        {
+          "name": "Paragraph M",
+          "slug": "paragraph-m",
+          "size": "1rem",
+          "fluid": false
+        },
+        {
+          "name": "Paragraph S",
+          "slug": "paragraph-s",
+          "size": "0.875rem",
+          "fluid": false
+        },
+        {
+          "name": "Extra Small",
+          "slug": "extra-small",
+          "size": "0.75rem",
+          "fluid": false
+        }
+      ]
+    },
+    "position": {
+      "sticky": true
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|cream",
+      "text": "var:preset|color|black"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "var:preset|font-size|paragraph-m",
+      "lineHeight": "1.4",
+      "fontWeight": "400"
+    },
+    "blocks": {
+      "core/button": {
+        "variations": {
+          "button-black": {
+            "color": {
+              "background": "var:preset|color|black",
+              "text": "var:preset|color|white"
+            },
+            "border": {
+              "color": "var:preset|color|black",
+              "style": "solid",
+              "width": "1px",
+              "radius": "2px"
+            },
+            "spacing": {
+              "padding": {
+                "top": "8px",
+                "right": "16px",
+                "bottom": "8px",
+                "left": "8px"
+              }
+            },
+            "css": "&:hover { cursor: pointer; background-color: var(--wp--preset--color--black); border-color: var(--wp--preset--color--black); } &:active { cursor: pointer; background-color: var(--wp--preset--color--black); }"
+          },
+          "button-white": {
+            "color": {
+              "background": "var:preset|color|white",
+              "text": "var:preset|color|black"
+            },
+            "border": {
+              "color": "var:preset|color|white",
+              "style": "solid",
+              "width": "1px",
+              "radius": "2px"
+            },
+            "spacing": {
+              "padding": {
+                "top": "8px",
+                "right": "16px",
+                "bottom": "8px",
+                "left": "8px"
+              }
+            },
+            "css": "&:hover { cursor: pointer; background-color: var(--wp--preset--color--white); border-color: var(--wp--preset--color--white); } &:active { cursor: pointer; background-color: var(--wp--preset--color--white); }"
+          }
+        }
+      },
+      "core/list": {
+        "spacing": {
+          "blockGap": "1rem"
+        }
+      }
+    },
+    "elements": {
+      "button": {
+        "border": {
+          "color": "var:preset|color|black",
+          "style": "solid",
+          "width": "1px",
+          "radius": "0"
+        },
+        "typography": {
+          "fontWeight": "400",
+          "fontSize": "var:preset|font-size|paragraph-s",
+          "fontFamily": "var:preset|font-family|body",
+          "textTransform": "uppercase",
+          "lineHeight": "1.7",
+          "textAlign": "center",
+          "letterSpacing": "0.28px"
+        },
+        "color": {
+          "background": "var:preset|color|black",
+          "text": "var:preset|color|white"
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "right": "1.25rem",
+            "bottom": "1rem",
+            "left": "1.25rem"
+          }
+        }
+      },
+      "link": {
+        "typography": {
+          "textDecoration": "none",
+          "fontFamily": "var:preset|font-family|body",
+          "textTransform": "uppercase",
+          "fontSize": "var:preset|font-size|paragraph-s",
+          "lineHeight": "1.7",
+          "letterSpacing": "0.28px"
+        },
+        "color": {
+          "text": "inherit"
+        },
+        "border": {
+          "bottom": {
+            "width": "0px"
+          }
+        },
+        ":hover": {
+          "typography": {
+            "textDecoration": "none"
+          },
+          "border": {
+            "bottom": {
+              "width": "0px"
+            }
+          }
+        }
+      },
+      "h1": {
+        "color": {
+          "text": "var:preset|color|black"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|h-1",
+          "lineHeight": "1",
+          "fontWeight": "700",
+          "fontFamily": "var:preset|font-family|heading"
+        }
+      },
+      "h2": {
+        "color": {
+          "text": "var:preset|color|black"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|h-2",
+          "lineHeight": "1",
+          "fontWeight": "700",
+          "fontFamily": "var:preset|font-family|heading"
+        }
+      },
+      "h3": {
+        "color": {
+          "text": "var:preset|color|black"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|h-3",
+          "lineHeight": "1.1",
+          "fontWeight": "700",
+          "fontFamily": "var:preset|font-family|heading",
+          "textTransform": "none"
+        }
+      },
+      "h4": {
+        "color": {
+          "text": "var:preset|color|black"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|h-4",
+          "lineHeight": "1.2",
+          "fontWeight": "700",
+          "letterSpacing": "0.24px",
+          "fontFamily": "var:preset|font-family|heading"
+        }
+      },
+      "h5": {
+        "color": {
+          "text": "var:preset|color|black"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|h-5",
+          "lineHeight": "1.2",
+          "fontWeight": "700",
+          "letterSpacing": "0.24px",
+          "fontFamily": "var:preset|font-family|heading"
+        }
+      },
+      "h6": {
+        "color": {
+          "text": "var:preset|color|black"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|h-6",
+          "lineHeight": "1.2",
+          "fontWeight": "700",
+          "letterSpacing": "0.24px",
+          "fontFamily": "var:preset|font-family|heading"
+        }
+      }
+    }
+  }
+}

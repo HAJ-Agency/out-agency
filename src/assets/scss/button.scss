@@ -1,0 +1,403 @@
+// adds mixins for buttons //
+@use "mixins" as *;
+
+// put all styling that both buttons have together in here //
+.wp-block-button__link {
+  @include transition();
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 40px;
+  max-width: 210px;
+  max-height: 40px;
+  border-radius: 2px;
+  position: relative;
+  &:before {
+    @include psuedo;
+    height: 8px;
+    width: 8px;
+    opacity: 1;
+    border-radius: 50px;
+    top: 16px;
+    left: 16px;
+  }
+  &:after {
+    @include psuedo;
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    top: 14px;
+    right: 0;
+  }
+  &:hover {
+    @include transition();
+    padding-left: 16px;
+    padding-right: 40px;
+    &:before {
+      @include transition();
+      left: 0;
+      opacity: 0;
+    }
+    &:after {
+      @include transition();
+      opacity: 1;
+      top: 14px;
+      right: 14px;
+    }
+  }
+}
+
+.is-style-button {
+  // styling for black button that white button does not have //
+  &-black {
+    a {
+      &:before {
+        background-color: #fff;
+      }
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+  }
+  // styling for white button that black button does not have //
+  &-white a {
+    &:before {
+      background-color: #111111;
+    }
+    &:after {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 185.343 185.343' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath style='fill:%23010002;' d='M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175 l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934 c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+}
+
+// Contact us form button and Workation register form button //
+.frm_forms .is-style-button-black {
+  all: unset;
+  @include transition();
+  border-radius: 2px;
+  border: solid 1px #fff;
+  background-color: var(--wp--preset--color--transparent);
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: var(--wp--preset--font-size--paragraph-s);
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  max-width: 210px;
+  max-height: 40px;
+  position: relative;
+  &:before {
+    @include psuedo;
+    height: 8px;
+    width: 8px;
+    opacity: 1;
+    border-radius: 50px;
+    background-color: #fff;
+    top: 16px;
+    left: 16px;
+  }
+  &:after {
+    @include psuedo;
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    top: 14px;
+    right: 0;
+  }
+  &:hover {
+    @include transition();
+    padding-left: 16px;
+    padding-right: 40px;
+    &:before {
+      @include transition();
+      left: 0;
+      opacity: 0;
+    }
+    &:after {
+      @include transition();
+      opacity: 1;
+      top: 14px;
+      right: 14px;
+    }
+  }
+}
+
+// read more achive button //
+.read-more-archive {
+  @include transition();
+  border-radius: 2px;
+  background-color: var(--wp--preset--color--black);
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: var(--wp--preset--font-size--paragraph-s);
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  max-width: 210px;
+  max-height: 40px;
+  position: relative;
+  &:before {
+    @include psuedo;
+    height: 8px;
+    width: 8px;
+    opacity: 1;
+    border-radius: 50px;
+    background-color: #fff;
+    top: 16px;
+    left: 16px;
+  }
+  &:after {
+    @include psuedo;
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    top: 14px;
+    right: 0;
+  }
+  &:hover {
+    @include transition();
+    padding-left: 16px;
+    padding-right: 40px;
+    &:before {
+      @include transition();
+      left: 0;
+      opacity: 0;
+    }
+    &:after {
+      @include transition();
+      opacity: 1;
+      top: 14px;
+      right: 14px;
+    }
+  }
+}
+
+// Previous customer cases button //
+.ui-accordion-header-icon {
+  display: none;
+}
+
+.fixed-cc-wrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  bottom: 16px;
+  z-index: 1;
+  width: 100vw;
+  max-width: 100vw;
+  .fixed-button {
+    width: 100%;
+    .wp-block-button {
+      @include transition(all, 400);
+      max-width: 100%;
+      width: 250px;
+      a {
+        @include transition(all, 400);
+        letter-spacing: 0.28px;
+        line-height: 1.7;
+        text-decoration: none;
+        text-transform: uppercase;
+        max-width: 100%;
+        width: 250px;
+        max-height: 56px;
+        border-radius: 2px;
+        text-align: left;
+        padding: 16px 52px 16px 16px;
+        &:before {
+          display: none;
+        }
+        &:after {
+          @include psuedo;
+          opacity: 1;
+          width: 20px;
+          height: 20px;
+          top: 18px;
+          right: 16px;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M6 15L12 9L18 15' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+          transition: transform 0.3s ease;
+          transform: rotate(0deg);
+        }
+      }
+    }
+    &:hover,
+    &.is-open {
+      .wp-block-button {
+        @include transition(all, 400);
+        width: 100%;
+        @media (max-width: 1440px) {
+          width: 93.6%;
+        }
+        a {
+          @include transition(all, 400);
+          width: 100vw;
+        }
+      }
+    }
+    &.is-open {
+      a {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .fixed-cc-content {
+    margin-top: 0;
+    // width: 100vw !important;
+    width: 100%;
+    max-width: 100%;
+    height: 75vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .read-more-cc {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto !important;
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M6 12H18M18 12L13 7M18 12L13 17' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+    @media (max-width: 1440px) {
+      width: 93.6%;
+      li .wp-container-core-group-is-layout-6c531013 {
+        .fixed-cc-img img {
+          height: 80px;
+          width: 156px;
+          object-fit: contain;
+        }
+        .wp-block-post-excerpt {
+          padding-right: 20% !important;
+        }
+        @media (max-width: 955px) {
+          display: block;
+          padding: 32px 0;
+          font-size: 14px;
+          .fixed-cc-img {
+            margin: 0 !important;
+            img {
+              height: 48px !important;
+              width: auto;
+              padding-bottom: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes switch-button-color {
+  from {
+    background-color: #111111;
+    color: #ffffff;
+  }
+  to {
+    background-color: #ffffff;
+    color: #111111;
+  }
+}
+
+@keyframes switch-button-before {
+  from {
+    background-color: #ffffff;
+  }
+  to {
+    background-color: #111111;
+  }
+}
+
+@keyframes switch-button-after {
+  from {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  }
+  to {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 185.343 185.343' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath style='fill:%23010002;' d='M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175 l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934 c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+.three-steps-wrapper {
+  .wp-block-button {
+    .wp-block-button__link {
+      animation: switch-button-color ease-in forwards;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+      &:before {
+        animation: switch-button-before ease-in forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+      &:after {
+        animation: switch-button-after ease-in forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+      @media (max-width: 700px) {
+        animation: none;
+        background-color: #111111;
+        color: #ffffff;
+        &:before {
+          animation: none;
+          background-color: #ffffff;
+        }
+        &:after {
+          animation: none;
+          background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+}
+
+// .mobile-full-width {
+//   .wp-block-button__link {
+//     @media (max-width: 780px) {
+//       padding-left: 16px;
+//       padding-right: 40px;
+//       max-width: 100%;
+//       width: 78vw;
+//       text-align: left;
+//       &:before {
+//         display: none;
+//       }
+//       &:after {
+//         @include psuedo;
+//         opacity: 1;
+//         width: 12px;
+//         height: 12px;
+//         top: 14px;
+//         right: 14px;
+//       }
+//       &:hover {
+//         display: none;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,17 @@
+// mixin for button transition styling // 
+@mixin transition($elements: all, $time: 150) {
+  -webkit-transition: #{$elements} #{$time}ms linear;
+  -ms-transition: #{$elements} #{$time}ms linear;
+  transition: #{$elements} #{$time}ms linear;
+}
+
+// mixin for buttons, before and after styling //
+@mixin psuedo {
+  @include transition(); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
