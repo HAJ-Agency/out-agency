@@ -1,4 +1,3 @@
-// --Footer SCSS-- //
 footer {
   .linkedin-frame {
     width: 288px;
@@ -27,15 +26,17 @@ footer {
     }
   }
   @media (max-width: 900px) {
-    .wp-block-navigation__container {
-      display: block;
+    .wp-block-navigation {
+      border: solid red 2px;  
+      .wp-block-navigation__container {
+        display: block;
+      }
     }
     .linkedin-column {
       flex-basis: 50% !important;
     }
   }
 }
-// removes margin before footer element //
 :where(.wp-site-blocks) > * {
   margin-block-start: 0 !important;
 }

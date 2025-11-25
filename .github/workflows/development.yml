@@ -16,11 +16,12 @@ jobs:
          - name: 📂 Sync Files
            uses: SamKirkland/web-deploy@v1
            with:
+              source-path: ./
               target-server: shishi.oderland.com
               remote-user: hajagenc
               private-ssh-key: ${{ secrets.SSH_KEY }}
               destination-path: /home/hajagenc/out.hajagency.com/wp-content/themes/out/
-              rsync-options: --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
+              rsync-options: --dry-run --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
 
          - name: ✅ Done
            run: echo "Deployment to out.hajagency.com complete!"

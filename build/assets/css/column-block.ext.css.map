@@ -1,0 +1,1 @@
+{"version":3,"file":"css/column-block.ext.css","mappings":";;;AAAA;EACG;IACG;EACJ;AACF,C","sources":["webpack://out/./src/assets/scss/column-block.ext.scss"],"sourcesContent":["@media screen and (max-width: 782px) {\r\n   .wp-block-column.is-responsive-order {\r\n      order: var(--order-index);\r\n   }\r\n}\r\n"],"names":[],"sourceRoot":""}
