@@ -1,1 +1,23 @@
-.wp-block-columns.has-column-divider{display:flex}.wp-block-columns.has-column-divider .wp-block-column{position:relative}.wp-block-columns.has-column-divider .wp-block-column:not(:last-child):after{background-color:var(--column-divider-color,#000);content:"";height:100%;position:absolute;left:calc(var(--wp--columns-horizontal-gap, 2rem)*-.5);top:0;width:var(--column-divider-width,1px)}@media(max-width:768px){.wp-block-columns.has-column-divider .wp-block-column:after{content:none!important}}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.102.1/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/.pnpm/postcss-loader@6.2.1_postcss@8.5.6_webpack@5.102.1/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/.pnpm/sass-loader@16.0.6_sass@1.93.3_webpack@5.102.1/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/assets/scss/columns-block.ext.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-columns.has-column-divider {
+  display: flex;
+}
+.wp-block-columns.has-column-divider .wp-block-column {
+  position: relative;
+}
+.wp-block-columns.has-column-divider .wp-block-column:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-0.5 * var(--wp--columns-horizontal-gap, 2rem));
+  width: var(--column-divider-width, 1px);
+  height: 100%;
+  background-color: var(--column-divider-color, #000);
+}
+@media (max-width: 768px) {
+  .wp-block-columns.has-column-divider .wp-block-column::after {
+    content: none !important;
+  }
+}
