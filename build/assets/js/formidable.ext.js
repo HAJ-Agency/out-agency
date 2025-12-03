@@ -1,1 +1,29 @@
-(()=>{var e;(e=jQuery)(function(){e(".frm_forms").length&&e(".frm_forms").each(function(){let t=e(this).find("label:contains('villkoren')");if(0===t.length)return;let n=t.parent(),r=t.html(),l=t.find("input");r=r.replace(l[0].outerHTML,""),r=r.replace("villkoren",'<a target="_blank" style="text-decoration:underline;" href="/integritetspolicy/">villkoren</a>'),n.prepend(l),t.html(r)})})})();
+/******/ (() => { // webpackBootstrap
+/*!*****************************************!*\
+  !*** ./src/assets/js/formidable.ext.js ***!
+  \*****************************************/
+(function ($) {
+  $(function () {
+    if ($(".frm_forms").length) {
+      $(".frm_forms").each(function () {
+        // Find the label with the text Jag accepterar villkoren
+        let label = $(this).find("label:contains('villkoren')");
+        if (label.length === 0) {
+          return; // No label found, exit early
+        }
+        let labelParent = label.parent();
+        let labelHtml = label.html();
+        // the label contains an input field, we need to remove the input field from the label
+        let inputField = label.find("input");
+        labelHtml = labelHtml.replace(inputField[0].outerHTML, "");
+        // wrap the text in a <a> tag with the link to /integritetspolicy but ignore the part that is value="Jag accepterar villkoren
+        labelHtml = labelHtml.replace("villkoren", '<a target="_blank" style="text-decoration:underline;" href="/integritetspolicy/">villkoren</a>');
+        labelParent.prepend(inputField);
+        label.html(labelHtml);
+      });
+    }
+  });
+})(jQuery);
+/******/ })()
+;
+//# sourceMappingURL=formidable.ext.js.map

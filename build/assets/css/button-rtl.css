@@ -1,1 +1,391 @@
-.wp-block-button__link{border-radius:2px;letter-spacing:.28px;line-height:1.7;max-height:40px;max-width:210px;padding-right:40px;position:relative;text-decoration:none;text-transform:uppercase;transition:all .15s linear}.wp-block-button__link:before{border-radius:50px;height:8px;right:16px;opacity:1;top:16px;width:8px}.wp-block-button__link:after,.wp-block-button__link:before{background-position:50%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;position:absolute;transition:all .15s linear}.wp-block-button__link:after{height:12px;opacity:0;left:0;top:14px;width:12px}.wp-block-button__link:hover{padding-right:16px;padding-left:40px;transition:all .15s linear}.wp-block-button__link:hover:before{right:0;opacity:0;transition:all .15s linear}.wp-block-button__link:hover:after{opacity:1;left:14px;top:14px;transition:all .15s linear}.is-style-button-black a:before{background-color:#fff}.is-style-button-black a:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27%23fff%27 stroke=%27%23fff%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979z%27/%3E%3C/svg%3E")}.is-style-button-white a:before{background-color:#111}.is-style-button-white a:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 xml:space=%27preserve%27 width=%27800%27 height=%27800%27 viewBox=%270 0 185.343 185.343%27%3E%3Cpath d=%27M51.707 185.343a10.7 10.7 0 0 1-7.593-3.149 10.724 10.724 0 0 1 0-15.175l74.352-74.347L44.114 18.32c-4.194-4.194-4.194-10.987 0-15.175 4.194-4.194 10.987-4.194 15.18 0l81.934 81.934c4.194 4.194 4.194 10.987 0 15.175l-81.934 81.939a10.68 10.68 0 0 1-7.587 3.15%27 style=%27fill:%23010002%27/%3E%3C/svg%3E")}.frm_forms .is-style-button-black{all:unset;background-color:var(--wp--preset--color--transparent);border:1px solid #fff;border-radius:2px;color:var(--wp--preset--color--white);font-family:var(--wp--preset--font-family--body);font-size:var(--wp--preset--font-size--paragraph-s);font-weight:400;letter-spacing:.28px;line-height:1.7;max-height:40px;max-width:210px;padding:8px 40px 8px 16px;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;transition:all .15s linear}.frm_forms .is-style-button-black:before{background-color:#fff;border-radius:50px;height:8px;right:16px;opacity:1;top:16px;width:8px}.frm_forms .is-style-button-black:after,.frm_forms .is-style-button-black:before{background-position:50%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;position:absolute;transition:all .15s linear}.frm_forms .is-style-button-black:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27%23fff%27 stroke=%27%23fff%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979z%27/%3E%3C/svg%3E");height:12px;opacity:0;left:0;top:14px;width:12px}.frm_forms .is-style-button-black:hover{padding-right:16px;padding-left:40px;transition:all .15s linear}.frm_forms .is-style-button-black:hover:before{right:0;opacity:0;transition:all .15s linear}.frm_forms .is-style-button-black:hover:after{opacity:1;left:14px;top:14px;transition:all .15s linear}.read-more-archive{background-color:var(--wp--preset--color--black);border-radius:2px;color:var(--wp--preset--color--white);font-family:var(--wp--preset--font-family--body);font-size:var(--wp--preset--font-size--paragraph-s);font-weight:400;letter-spacing:.28px;line-height:1.7;max-height:40px;max-width:210px;padding:8px 40px 8px 16px;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;transition:all .15s linear}.read-more-archive:before{background-color:#fff;border-radius:50px;height:8px;right:16px;opacity:1;top:16px;width:8px}.read-more-archive:after,.read-more-archive:before{background-position:50%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;position:absolute;transition:all .15s linear}.read-more-archive:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27%23fff%27 stroke=%27%23fff%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979z%27/%3E%3C/svg%3E");height:12px;opacity:0;left:0;top:14px;width:12px}.read-more-archive:hover{padding-right:16px;padding-left:40px;transition:all .15s linear}.read-more-archive:hover:before{right:0;opacity:0;transition:all .15s linear}.read-more-archive:hover:after{opacity:1;left:14px;top:14px;transition:all .15s linear}.ui-accordion-header-icon{display:none}.fixed-cc-wrapper{align-items:center;bottom:16px;display:flex;flex-direction:column;max-width:100vw;position:fixed;width:100vw;z-index:1}.fixed-cc-wrapper .fixed-button{width:100%}.fixed-cc-wrapper .fixed-button .wp-block-button,.fixed-cc-wrapper .fixed-button .wp-block-button a{max-width:100%;transition:all .4s linear;width:250px}.fixed-cc-wrapper .fixed-button .wp-block-button a{border-radius:2px;letter-spacing:.28px;line-height:1.7;max-height:56px;padding:16px 16px 16px 52px;text-align:right;text-decoration:none;text-transform:uppercase}.fixed-cc-wrapper .fixed-button .wp-block-button a:before{display:none}.fixed-cc-wrapper .fixed-button .wp-block-button a:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 24 24%27%3E%3Cpath stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m6 15 6-6 6 6%27/%3E%3C/svg%3E");background-position:50%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;height:20px;opacity:1;position:absolute;left:16px;top:18px;transform:rotate(0deg);transition:all .15s linear;transition:transform .3s ease;width:20px}.fixed-cc-wrapper .fixed-button.is-open .wp-block-button,.fixed-cc-wrapper .fixed-button:hover .wp-block-button{transition:all .4s linear;width:100%}@media(max-width:1440px){.fixed-cc-wrapper .fixed-button.is-open .wp-block-button,.fixed-cc-wrapper .fixed-button:hover .wp-block-button{width:93.6%}}.fixed-cc-wrapper .fixed-button.is-open .wp-block-button a,.fixed-cc-wrapper .fixed-button:hover .wp-block-button a{transition:all .4s linear;width:100vw}.fixed-cc-wrapper .fixed-button.is-open a:after{transform:rotate(-180deg)}.fixed-cc-wrapper .fixed-cc-content{height:75vh;margin-top:0;max-width:100%;overflow-y:scroll;width:100%}.fixed-cc-wrapper .fixed-cc-content::-webkit-scrollbar{display:none}.fixed-cc-wrapper .fixed-cc-content .read-more-cc{align-items:center;display:inline-flex;gap:12px;margin-top:auto!important}.fixed-cc-wrapper .fixed-cc-content .read-more-cc:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 24 24%27%3E%3Cpath stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M6 12h12m0 0-5-5m5 5-5 5%27/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;height:22px;transition:transform .5s ease-in-out;width:22px}@media(max-width:1440px){.fixed-cc-wrapper .fixed-cc-content{width:93.6%}.fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img img{height:80px;-o-object-fit:contain;object-fit:contain;width:156px}.fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .wp-block-post-excerpt{padding-left:20%!important}}@media(max-width:1440px)and (max-width:955px){.fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013{display:block;font-size:14px;padding:32px 0}.fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img{margin:0!important}.fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img img{height:48px!important;padding-bottom:16px;width:auto}}@keyframes switch-button-color{0%{background-color:#111;color:#fff}to{background-color:#fff;color:#111}}@keyframes switch-button-before{0%{background-color:#fff}to{background-color:#111}}@keyframes switch-button-after{0%{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27%23fff%27 stroke=%27%23fff%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979z%27/%3E%3C/svg%3E")}to{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 xml:space=%27preserve%27 width=%27800%27 height=%27800%27 viewBox=%270 0 185.343 185.343%27%3E%3Cpath d=%27M51.707 185.343a10.7 10.7 0 0 1-7.593-3.149 10.724 10.724 0 0 1 0-15.175l74.352-74.347L44.114 18.32c-4.194-4.194-4.194-10.987 0-15.175 4.194-4.194 10.987-4.194 15.18 0l81.934 81.934c4.194 4.194 4.194 10.987 0 15.175l-81.934 81.939a10.68 10.68 0 0 1-7.587 3.15%27 style=%27fill:%23010002%27/%3E%3C/svg%3E")}}.three-steps-wrapper .wp-block-button .wp-block-button__link{animation:switch-button-color ease-in forwards;animation-range:entry 0 cover 40%;animation-timeline:view()}.three-steps-wrapper .wp-block-button .wp-block-button__link:before{animation:switch-button-before ease-in forwards;animation-range:entry 0 cover 40%;animation-timeline:view()}.three-steps-wrapper .wp-block-button .wp-block-button__link:after{animation:switch-button-after ease-in forwards;animation-range:entry 0 cover 40%;animation-timeline:view()}@media(max-width:700px){.three-steps-wrapper .wp-block-button .wp-block-button__link{animation:none;background-color:#111;color:#fff}.three-steps-wrapper .wp-block-button .wp-block-button__link:before{animation:none;background-color:#fff}.three-steps-wrapper .wp-block-button .wp-block-button__link:after{animation:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27%23fff%27 stroke=%27%23fff%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979z%27/%3E%3C/svg%3E")}}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.102.1/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/.pnpm/postcss-loader@6.2.1_postcss@8.5.6_webpack@5.102.1/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/.pnpm/sass-loader@16.0.6_sass@1.93.3_webpack@5.102.1/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/assets/scss/button.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-button__link {
+  transition: all 150ms linear;
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-right: 40px;
+  max-width: 210px;
+  max-height: 40px;
+  border-radius: 2px;
+  position: relative;
+}
+.wp-block-button__link:before {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  opacity: 1;
+  border-radius: 50px;
+  top: 16px;
+  right: 16px;
+}
+.wp-block-button__link:after {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  width: 12px;
+  height: 12px;
+  top: 14px;
+  left: 0;
+}
+.wp-block-button__link:hover {
+  transition: all 150ms linear;
+  padding-right: 16px;
+  padding-left: 40px;
+}
+.wp-block-button__link:hover:before {
+  transition: all 150ms linear;
+  right: 0;
+  opacity: 0;
+}
+.wp-block-button__link:hover:after {
+  transition: all 150ms linear;
+  opacity: 1;
+  top: 14px;
+  left: 14px;
+}
+.is-style-button-black a:before {
+  background-color: #fff;
+}
+.is-style-button-black a:after {
+  background-image: url("data:image/svg+xml,%3Csvg fill=%27%23ffffff%27 viewBox=%270 0 20 20%27 xmlns=%27http://www.w3.org/2000/svg%27 stroke=%27%23ffffff%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.is-style-button-white a:before {
+  background-color: #111111;
+}
+.is-style-button-white a:after {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version=%271.0%27 encoding=%27iso-8859-1%27%3F%3E%3C%21-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg height=%27800px%27 width=%27800px%27 version=%271.1%27 id=%27Capa_1%27 xmlns=%27http://www.w3.org/2000/svg%27 xmlns:xlink=%27http://www.w3.org/1999/xlink%27 viewBox=%270 0 185.343 185.343%27 xml:space=%27preserve%27%3E%3Cg%3E%3Cg%3E%3Cpath style=%27fill:%23010002;%27 d=%27M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175 l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934 c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.frm_forms .is-style-button-black {
+  all: unset;
+  transition: all 150ms linear;
+  border-radius: 2px;
+  border: solid 1px #fff;
+  background-color: var(--wp--preset--color--transparent);
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: var(--wp--preset--font-size--paragraph-s);
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 40px;
+  max-width: 210px;
+  max-height: 40px;
+  position: relative;
+}
+.frm_forms .is-style-button-black:before {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  opacity: 1;
+  border-radius: 50px;
+  background-color: #fff;
+  top: 16px;
+  right: 16px;
+}
+.frm_forms .is-style-button-black:after {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg fill=%27%23ffffff%27 viewBox=%270 0 20 20%27 xmlns=%27http://www.w3.org/2000/svg%27 stroke=%27%23ffffff%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  top: 14px;
+  left: 0;
+}
+.frm_forms .is-style-button-black:hover {
+  transition: all 150ms linear;
+  padding-right: 16px;
+  padding-left: 40px;
+}
+.frm_forms .is-style-button-black:hover:before {
+  transition: all 150ms linear;
+  right: 0;
+  opacity: 0;
+}
+.frm_forms .is-style-button-black:hover:after {
+  transition: all 150ms linear;
+  opacity: 1;
+  top: 14px;
+  left: 14px;
+}
+.read-more-archive {
+  transition: all 150ms linear;
+  border-radius: 2px;
+  background-color: var(--wp--preset--color--black);
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: var(--wp--preset--font-size--paragraph-s);
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 40px;
+  max-width: 210px;
+  max-height: 40px;
+  position: relative;
+}
+.read-more-archive:before {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  opacity: 1;
+  border-radius: 50px;
+  background-color: #fff;
+  top: 16px;
+  right: 16px;
+}
+.read-more-archive:after {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg fill=%27%23ffffff%27 viewBox=%270 0 20 20%27 xmlns=%27http://www.w3.org/2000/svg%27 stroke=%27%23ffffff%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  top: 14px;
+  left: 0;
+}
+.read-more-archive:hover {
+  transition: all 150ms linear;
+  padding-right: 16px;
+  padding-left: 40px;
+}
+.read-more-archive:hover:before {
+  transition: all 150ms linear;
+  right: 0;
+  opacity: 0;
+}
+.read-more-archive:hover:after {
+  transition: all 150ms linear;
+  opacity: 1;
+  top: 14px;
+  left: 14px;
+}
+.ui-accordion-header-icon {
+  display: none;
+}
+.fixed-cc-wrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  bottom: 16px;
+  z-index: 1;
+  width: 100vw;
+  max-width: 100vw;
+}
+.fixed-cc-wrapper .fixed-button {
+  width: 100%;
+}
+.fixed-cc-wrapper .fixed-button .wp-block-button {
+  transition: all 400ms linear;
+  max-width: 100%;
+  width: 250px;
+}
+.fixed-cc-wrapper .fixed-button .wp-block-button a {
+  transition: all 400ms linear;
+  letter-spacing: 0.28px;
+  line-height: 1.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  max-width: 100%;
+  width: 250px;
+  max-height: 56px;
+  border-radius: 2px;
+  text-align: right;
+  padding: 16px 16px 16px 52px;
+}
+.fixed-cc-wrapper .fixed-button .wp-block-button a:before {
+  display: none;
+}
+.fixed-cc-wrapper .fixed-button .wp-block-button a:after {
+  transition: all 150ms linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  top: 18px;
+  left: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M6 15L12 9L18 15%27 stroke=%27%23ffffff%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+.fixed-cc-wrapper .fixed-button:hover .wp-block-button, .fixed-cc-wrapper .fixed-button.is-open .wp-block-button {
+  transition: all 400ms linear;
+  width: 100%;
+}
+@media (max-width: 1440px) {
+  .fixed-cc-wrapper .fixed-button:hover .wp-block-button, .fixed-cc-wrapper .fixed-button.is-open .wp-block-button {
+    width: 93.6%;
+  }
+}
+.fixed-cc-wrapper .fixed-button:hover .wp-block-button a, .fixed-cc-wrapper .fixed-button.is-open .wp-block-button a {
+  transition: all 400ms linear;
+  width: 100vw;
+}
+.fixed-cc-wrapper .fixed-button.is-open a:after {
+  transform: rotate(-180deg);
+}
+.fixed-cc-wrapper .fixed-cc-content {
+  margin-top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 75vh;
+  overflow-y: scroll;
+}
+.fixed-cc-wrapper .fixed-cc-content::-webkit-scrollbar {
+  display: none;
+}
+.fixed-cc-wrapper .fixed-cc-content .read-more-cc {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto !important;
+}
+.fixed-cc-wrapper .fixed-cc-content .read-more-cc:after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M6 12H18M18 12L13 7M18 12L13 17%27 stroke=%27%23ffffff%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 1440px) {
+  .fixed-cc-wrapper .fixed-cc-content {
+    width: 93.6%;
+  }
+  .fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img img {
+    height: 80px;
+    width: 156px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .wp-block-post-excerpt {
+    padding-left: 20% !important;
+  }
+}
+@media (max-width: 1440px) and (max-width: 955px) {
+  .fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 {
+    display: block;
+    padding: 32px 0;
+    font-size: 14px;
+  }
+  .fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img {
+    margin: 0 !important;
+  }
+  .fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img img {
+    height: 48px !important;
+    width: auto;
+    padding-bottom: 16px;
+  }
+}
+@keyframes switch-button-color {
+  from {
+    background-color: #111111;
+    color: #ffffff;
+  }
+  to {
+    background-color: #ffffff;
+    color: #111111;
+  }
+}
+@keyframes switch-button-before {
+  from {
+    background-color: #ffffff;
+  }
+  to {
+    background-color: #111111;
+  }
+}
+@keyframes switch-button-after {
+  from {
+    background-image: url("data:image/svg+xml,%3Csvg fill=%27%23ffffff%27 viewBox=%270 0 20 20%27 xmlns=%27http://www.w3.org/2000/svg%27 stroke=%27%23ffffff%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  }
+  to {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version=%271.0%27 encoding=%27iso-8859-1%27%3F%3E%3C%21-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg height=%27800px%27 width=%27800px%27 version=%271.1%27 id=%27Capa_1%27 xmlns=%27http://www.w3.org/2000/svg%27 xmlns:xlink=%27http://www.w3.org/1999/xlink%27 viewBox=%270 0 185.343 185.343%27 xml:space=%27preserve%27%3E%3Cg%3E%3Cg%3E%3Cpath style=%27fill:%23010002;%27 d=%27M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175 l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934 c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+.three-steps-wrapper .wp-block-button .wp-block-button__link {
+  animation: switch-button-color ease-in forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.three-steps-wrapper .wp-block-button .wp-block-button__link:before {
+  animation: switch-button-before ease-in forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.three-steps-wrapper .wp-block-button .wp-block-button__link:after {
+  animation: switch-button-after ease-in forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+@media (max-width: 700px) {
+  .three-steps-wrapper .wp-block-button .wp-block-button__link {
+    animation: none;
+    background-color: #111111;
+    color: #ffffff;
+  }
+  .three-steps-wrapper .wp-block-button .wp-block-button__link:before {
+    animation: none;
+    background-color: #ffffff;
+  }
+  .three-steps-wrapper .wp-block-button .wp-block-button__link:after {
+    animation: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill=%27%23ffffff%27 viewBox=%270 0 20 20%27 xmlns=%27http://www.w3.org/2000/svg%27 stroke=%27%23ffffff%27%3E%3Cg id=%27SVGRepo_bgCarrier%27 stroke-width=%270%27%3E%3C/g%3E%3Cg id=%27SVGRepo_tracerCarrier%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3C/g%3E%3Cg id=%27SVGRepo_iconCarrier%27%3E%3Cpath d=%27M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  }
+}

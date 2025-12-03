@@ -467,7 +467,6 @@
   }
 }
 
-
 @keyframes switch-fill {
   from {
     fill: #ffffff;
@@ -764,7 +763,7 @@
       display: flex;
       justify-content: center;
     }
-    
+
     .wp-block-image img {
       margin: 0 auto;
     }
@@ -777,7 +776,7 @@
       object-fit: cover;
     }
   }
-  
+
   .image-gallery-column2 {
     figure {
       &:nth-child(1),
@@ -797,7 +796,7 @@
       }
     }
   }
-  
+
   .image-gallery-column3 {
     img {
       width: 437px;
@@ -807,3 +806,19 @@
   }
 }
 
+@media (min-width: 900px) {
+  .show-desktop-only {
+    display: block;
+  }
+  .show-mobile-only {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .show-desktop-only {
+    display: none;
+  }
+  .show-mobile-only {
+    display: block;
+  }
+}
