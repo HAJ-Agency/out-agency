@@ -8,9 +8,11 @@ namespace Out\Includes\Hooks;
  * @see https://developers.google.com/speed/libraries#jquery
  * @since 1.0.0
  */
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets', 1);
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets');
 
 function out_enqueue_assets() {
+   // wp_register_script('jquery');
+   // wp_enqueue_script('jquery-child', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js');
    wp_enqueue_style(
       'global',
       get_stylesheet_directory_uri() . '/build/assets/css/critical/global.css',
@@ -54,13 +56,6 @@ function out_enqueue_assets() {
       filemtime(get_stylesheet_directory() . '/build/assets/css/case-blocks.css')
    );
    wp_enqueue_script(
-      'jquery',
-      'https://code.jquery.com/jquery-3.7.1.min.js',
-      [],
-      '1.0',
-      true
-   );
-   wp_enqueue_script(
       'formidable-ext',
       get_stylesheet_directory_uri() . '/build/assets/js/formidable.ext.js',
       ['jquery'],
@@ -85,17 +80,20 @@ function out_enqueue_assets() {
       get_stylesheet_directory_uri() . '/build/assets/js/header.js',
       ['jquery'],
       filemtime(get_stylesheet_directory() . '/build/assets/js/header.js'),
-      array(
+      [
          'strategy'  => 'defer',
          'in_footer' => true,
-      )
+      ]
    );
    wp_register_script(
       'jquery-ui-cdn',
       'https://code.jquery.com/ui/1.14.1/jquery-ui.min.js',
       ['jquery'],
       '1.14.1',
-      true
+      array(
+         'strategy'  => 'defer',
+         'in_footer' => true,
+      )
    );
    wp_register_style(
       'jquery-ui-css',
@@ -109,7 +107,10 @@ function out_enqueue_assets() {
       get_stylesheet_directory_uri() . '/build/assets/js/modal.js',
       ['jquery', 'jquery-ui-cdn'],
       '',
-      true
+      array(
+         'strategy'  => 'defer',
+         'in_footer' => true,
+      )
    );
 
    wp_enqueue_script(
@@ -117,7 +118,10 @@ function out_enqueue_assets() {
       get_stylesheet_directory_uri() . '/build/assets/js/accordion-button.js',
       ['jquery', 'jquery-ui-cdn'],
       '',
-      true
+      array(
+         'strategy'  => 'defer',
+         'in_footer' => true,
+      )
    );
 }
 
