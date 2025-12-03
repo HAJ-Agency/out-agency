@@ -256,9 +256,9 @@
   .service-archive-mobile {
     display: block !important;
     img {
+      aspect-ratio: 16/9;      
       border-radius: 8px;
-      width: 100vw;
-      height: 512px;
+      width: 100vw;      
       object-fit: cover;
     }
     .read-more-wrapper {
