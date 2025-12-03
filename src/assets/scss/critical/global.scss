@@ -642,17 +642,15 @@
       z-index: 3;
       .wp-block-columns {
         margin-top: auto;
+        .wp-block-column {
+          padding: 10px !important;
+        }
       }
     }
     &:hover {
       .about-individual-hover {
         @include transition;
-        opacity: 1;
-        .wp-block-columns {
-          .wp-block-column {
-            padding: 10px !important;
-          }
-        }
+        opacity: 1;        
       }
     }
   }

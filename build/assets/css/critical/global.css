@@ -603,12 +603,12 @@
 .about-individual-wrapper .about-individual .about-individual-hover .wp-block-columns {
   margin-top: auto;
 }
+.about-individual-wrapper .about-individual .about-individual-hover .wp-block-columns .wp-block-column {
+  padding: 10px !important;
+}
 .about-individual-wrapper .about-individual:hover .about-individual-hover {
   transition: all 150ms linear;
   opacity: 1;
-}
-.about-individual-wrapper .about-individual:hover .about-individual-hover .wp-block-columns .wp-block-column {
-  padding: 10px !important;
 }
 .about-individual-wrapper .individual-name {
   position: absolute;
