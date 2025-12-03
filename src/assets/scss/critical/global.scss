@@ -635,18 +635,20 @@
       z-index: 3;
     }
     .about-individual-hover {
+      @include transition;
       height: 512px;
       max-height: 512px;
       opacity: 0;
       z-index: 3;
-      @include transition;
+      .wp-block-columns {
+        margin-top: auto;
+      }
     }
     &:hover {
       .about-individual-hover {
         @include transition;
         opacity: 1;
         .wp-block-columns {
-          margin-top: auto;
           .wp-block-column {
             padding: 10px !important;
           }
@@ -663,17 +665,16 @@
 }
 @media (max-width: 900px) {
   .about-individual-hover {
-    padding: 1rem!important;
+    padding: 1rem !important;
     .contact-us-info {
       figure {
         img {
           vertical-align: middle;
         }
       }
-      
     }
     .wp-block-columns {
-      gap: 1rem!important;
+      gap: 1rem !important;
     }
   }
 }
