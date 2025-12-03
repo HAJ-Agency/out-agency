@@ -12,7 +12,7 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets');
 
 function out_enqueue_assets() {
    // wp_register_script('jquery');
-   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], null, true);
+   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], null, false);
    wp_enqueue_style(
       'global',
       get_stylesheet_directory_uri() . '/build/assets/css/critical/global.css',
