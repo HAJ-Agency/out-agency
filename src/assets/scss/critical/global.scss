@@ -50,7 +50,7 @@
 }
 
 .wp-block-image img {
-  border-radius: 8px;
+  // border-radius: 8px;
   // margin-top: 1.5rem;
   vertical-align: unset;
 }
@@ -256,9 +256,9 @@
   .service-archive-mobile {
     display: block !important;
     img {
-      aspect-ratio: 16/9;      
+      aspect-ratio: 16/9;
       border-radius: 8px;
-      width: 100vw;      
+      width: 100vw;
       object-fit: cover;
     }
     .read-more-wrapper {
@@ -629,8 +629,11 @@
 .about-individual-wrapper {
   position: relative;
   .about-individual {
-    height: 512px;
-    position: relative;
+    // height: 512px;
+    // position: relative;
+    .wp-block-cover__inner-container {
+      z-index: 100;
+    }
     .about-individual-hover {
       height: 512px;
       max-height: 512px;
@@ -640,8 +643,14 @@
     }
     &:hover {
       .about-individual-hover {
-        opacity: 1;
         @include transition;
+        opacity: 1;
+        .wp-block-columns {
+          margin-top: auto;
+          .wp-block-column {
+            padding: 10px !important;
+          }
+        }
       }
     }
   }
@@ -650,6 +659,19 @@
     left: 32px;
     bottom: 32px;
     z-index: 2;
+  }
+}
+@media (max-width: 900px) {
+  .about-individual-hover {
+    padding: 1rem!important;
+    .contact-us-info {
+      figure {
+        img {
+          vertical-align: center;
+        }
+      }
+      
+    }
   }
 }
 

@@ -54,7 +54,6 @@
   }
 }
 .wp-block-image img {
-  border-radius: 8px;
   vertical-align: unset;
 }
 .style-svg img {
@@ -591,9 +590,8 @@
 .about-individual-wrapper {
   position: relative;
 }
-.about-individual-wrapper .about-individual {
-  height: 512px;
-  position: relative;
+.about-individual-wrapper .about-individual .wp-block-cover__inner-container {
+  z-index: 100;
 }
 .about-individual-wrapper .about-individual .about-individual-hover {
   height: 512px;
@@ -603,14 +601,28 @@
   transition: all 150ms linear;
 }
 .about-individual-wrapper .about-individual:hover .about-individual-hover {
-  opacity: 1;
   transition: all 150ms linear;
+  opacity: 1;
+}
+.about-individual-wrapper .about-individual:hover .about-individual-hover .wp-block-columns {
+  margin-top: auto;
+}
+.about-individual-wrapper .about-individual:hover .about-individual-hover .wp-block-columns .wp-block-column {
+  padding: 10px !important;
 }
 .about-individual-wrapper .individual-name {
   position: absolute;
   left: 32px;
   bottom: 32px;
   z-index: 2;
+}
+@media (max-width: 900px) {
+  .about-individual-hover {
+    padding: 1rem !important;
+  }
+  .about-individual-hover .contact-us-info figure img {
+    vertical-align: center;
+  }
 }
 .black-circle-frame {
   width: 162px;
