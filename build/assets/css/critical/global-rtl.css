@@ -591,7 +591,7 @@
   position: relative;
 }
 .about-individual-wrapper .about-individual .wp-block-cover__inner-container {
-  z-index: 100;
+  z-index: 3;
 }
 .about-individual-wrapper .about-individual .about-individual-hover {
   height: 512px;
@@ -621,7 +621,10 @@
     padding: 1rem !important;
   }
   .about-individual-hover .contact-us-info figure img {
-    vertical-align: center;
+    vertical-align: middle;
+  }
+  .about-individual-hover .wp-block-columns {
+    gap: 1rem !important;
   }
 }
 .black-circle-frame {

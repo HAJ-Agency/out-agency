@@ -632,7 +632,7 @@
     // height: 512px;
     // position: relative;
     .wp-block-cover__inner-container {
-      z-index: 100;
+      z-index: 3;
     }
     .about-individual-hover {
       height: 512px;
@@ -667,10 +667,13 @@
     .contact-us-info {
       figure {
         img {
-          vertical-align: center;
+          vertical-align: middle;
         }
       }
       
+    }
+    .wp-block-columns {
+      gap: 1rem!important;
     }
   }
 }
