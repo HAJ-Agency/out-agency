@@ -453,7 +453,6 @@
 }
 .three-steps-wrapper .step-card {
   color: #ffffff;
-  width: 437px;
   height: 437px;
   border-radius: 8px;
   display: flex;
@@ -462,6 +461,11 @@
   animation: switch-color2 ease-in forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  width: 437px;
+}
+.three-steps-wrapper .step-card .wp-block-cover img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .three-steps-wrapper .step-card .step-frame {
   display: flex;
@@ -506,9 +510,6 @@
 @media (max-width: 900px) {
   .three-steps-wrapper {
     animation-range: entry 0% cover 20%;
-  }
-  .three-steps-wrapper .wp-block-columns {
-    display: block !important;
   }
   .three-steps-wrapper .wp-block-columns .step-card {
     margin: auto !important;

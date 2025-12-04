@@ -486,7 +486,6 @@
   }
   .step-card {
     color: #ffffff;
-    width: 437px;
     height: 437px;
     border-radius: 8px;
     display: flex;
@@ -495,6 +494,11 @@
     animation: switch-color2 ease-in forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+    width: 437px;
+
+    .wp-block-cover img {
+      object-fit: contain;
+    }
     .step-frame {
       display: flex;
       flex-direction: column;
@@ -535,7 +539,7 @@
   @media (max-width: 900px) {
     animation-range: entry 0% cover 20%;
     .wp-block-columns {
-      display: block !important;
+      
       .step-card {
         margin: auto !important;
         margin-bottom: 16px !important;
@@ -629,8 +633,6 @@
 .about-individual-wrapper {
   position: relative;
   .about-individual {
-    // height: 512px;
-    // position: relative;
     .wp-block-cover__inner-container {
       z-index: 3;
     }
@@ -650,7 +652,7 @@
     &:hover {
       .about-individual-hover {
         @include transition;
-        opacity: 1;        
+        opacity: 1;
       }
     }
   }

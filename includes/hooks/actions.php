@@ -8,11 +8,9 @@ namespace Out\Includes\Hooks;
  * @see https://developers.google.com/speed/libraries#jquery
  * @since 1.0.0
  */
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets');
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets', 99, 0);
 
 function out_enqueue_assets() {
-   // wp_register_script('jquery');
-   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], null, false);
    wp_enqueue_style(
       'global',
       get_stylesheet_directory_uri() . '/build/assets/css/critical/global.css',
@@ -163,6 +161,7 @@ function out_enqueue_admin_assets() {
 }
 
 add_action('enqueue_block_assets', __NAMESPACE__ . '\extend_block_assets');
+
 function extend_block_assets() {
    $is_gutenberg_editor = is_admin() && get_current_screen()->is_block_editor();
 
@@ -241,6 +240,7 @@ function extend_block_assets() {
  * Wordpress Init action
  */
 add_action('init', __NAMESPACE__ . '\out_theme_init');
+
 function out_theme_init() {
    // Register custom blocks (A - Z)
    register_block_type(get_stylesheet_directory() . '/build/blocks/post-archive');
@@ -280,13 +280,17 @@ function remove_comment_support() {
    remove_post_type_support('post', 'comments');
    remove_post_type_support('page', 'comments');
 }
+
 add_filter('comments_open',  '__return_false', 20, 2);
 add_filter('pings_open', '__return_false', 20, 2);
 add_action('admin_menu', __NAMESPACE__ . '\remove_comments_admin_menu');
+
 function remove_comments_admin_menu() {
    remove_menu_page('edit-comments.php');
 }
+
 add_action('admin_bar_menu', __NAMESPACE__ . '\remove_comments_admin_bar', 999);
+
 function remove_comments_admin_bar($wp_admin_bar) {
    $wp_admin_bar->remove_node('comments');
 }
