@@ -32,9 +32,6 @@ footer .footer-small-links a {
   text-transform: capitalize;
 }
 @media (max-width: 900px) {
-  footer .wp-block-navigation {
-    border: solid red 2px;
-  }
   footer .wp-block-navigation .wp-block-navigation__container {
     display: block;
   }
