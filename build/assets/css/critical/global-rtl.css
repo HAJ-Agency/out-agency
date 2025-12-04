@@ -4,8 +4,7 @@
 @media (max-width: 1440px) {
   .content-margin-mobile,
   .background-img .wp-block-cover__inner-container,
-  .contact-us-background .wp-block-cover__inner-container,
-  .three-steps-wrapper .wp-block-group {
+  .contact-us-background .wp-block-cover__inner-container {
     margin-left: 32px !important;
     margin-right: 32px !important;
   }
@@ -13,8 +12,7 @@
 @media (max-width: 1440px) and (max-width: 500px) {
   .content-margin-mobile,
   .background-img .wp-block-cover__inner-container,
-  .contact-us-background .wp-block-cover__inner-container,
-  .three-steps-wrapper .wp-block-group {
+  .contact-us-background .wp-block-cover__inner-container {
     margin-left: 16px !important;
     margin-right: 16px !important;
   }
@@ -492,6 +490,8 @@
   animation: switch-color ease-in forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .three-steps-wrapper h2 {
   color: inherit;
@@ -540,12 +540,22 @@
   .three-steps-wrapper {
     animation-range: entry 0% cover 20%;
   }
+  .three-steps-wrapper .ellipse-background {
+    animation: none;
+  }
+  .three-steps-wrapper .ellipse-background figure.ellipsis-black {
+    opacity: 0;
+  }
+  .three-steps-wrapper .ellipse-background figure.ellipsis-white {
+    opacity: 1;
+  }
+  .three-steps-wrapper .ellipse-background h6 {
+    animation: none !important;
+    color: #ffffff;
+  }
   .three-steps-wrapper .wp-block-columns .step-card {
     margin: auto !important;
     margin-bottom: 16px !important;
-  }
-  .three-steps-wrapper .wp-block-columns .step-card h6 {
-    padding-top: 10px;
   }
 }
 @media (max-width: 900px) and (max-width: 700px) {
