@@ -435,6 +435,22 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 // SCSS for scroll animation for three steps //
 @keyframes switch-color {
   from {
@@ -475,7 +491,35 @@
     fill: #111111;
   }
 }
-
+.ellipse-background {
+  position: relative;
+  h6 {
+    animation: switch-heading-color ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  figure {
+    animation-range: entry 0% cover 40%;
+    animation-timeline: view() !important;
+    height: 100px;
+    position: absolute;
+    width: 140px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    &.ellipsis {
+      &-black {
+        animation: fade-in;
+      }
+      &-white {
+        animation: fade-out;
+      }
+    }
+  }
+  height: 100px;
+  width: 100%;
+}
 // SCSS for three steps part of startpage //
 .three-steps-wrapper {
   animation: switch-color ease-in forwards;
@@ -486,15 +530,9 @@
   }
   .step-card {
     color: #ffffff;
-    height: 437px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation: switch-color2 ease-in forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-    width: 437px;
 
     .wp-block-cover img {
       object-fit: contain;
@@ -503,16 +541,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      svg {
-        width: 106px !important;
-        height: 60px !important;
-        margin: auto !important;
-        path {
-          animation: switch-fill ease-in forwards;
-          animation-timeline: view();
-          animation-range: entry 0% cover 40%;
-        }
-      }
       h6 {
         padding-top: 20px;
         animation: switch-heading-color ease-in forwards;
@@ -539,7 +567,6 @@
   @media (max-width: 900px) {
     animation-range: entry 0% cover 20%;
     .wp-block-columns {
-      
       .step-card {
         margin: auto !important;
         margin-bottom: 16px !important;
@@ -663,6 +690,7 @@
     z-index: 2;
   }
 }
+
 @media (max-width: 900px) {
   .about-individual-hover {
     padding: 1rem !important;

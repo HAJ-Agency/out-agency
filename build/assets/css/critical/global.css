@@ -407,6 +407,22 @@
   animation-timeline: view();
   animation-range: entry 0% exit 100%;
 }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes switch-color {
   from {
     background-color: #fffaf3;
@@ -443,6 +459,35 @@
     fill: #111111;
   }
 }
+.ellipse-background {
+  position: relative;
+}
+.ellipse-background h6 {
+  animation: switch-heading-color ease-in forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.ellipse-background figure {
+  animation-range: entry 0% cover 40%;
+  animation-timeline: view() !important;
+  height: 100px;
+  position: absolute;
+  width: 140px;
+}
+.ellipse-background figure img {
+  height: 100%;
+  width: 100%;
+}
+.ellipse-background figure.ellipsis-black {
+  animation: fade-in;
+}
+.ellipse-background figure.ellipsis-white {
+  animation: fade-out;
+}
+.ellipse-background {
+  height: 100px;
+  width: 100%;
+}
 .three-steps-wrapper {
   animation: switch-color ease-in forwards;
   animation-timeline: view();
@@ -453,15 +498,9 @@
 }
 .three-steps-wrapper .step-card {
   color: #ffffff;
-  height: 437px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation: switch-color2 ease-in forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
-  width: 437px;
 }
 .three-steps-wrapper .step-card .wp-block-cover img {
   -o-object-fit: contain;
@@ -471,16 +510,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.three-steps-wrapper .step-card .step-frame svg {
-  width: 106px !important;
-  height: 60px !important;
-  margin: auto !important;
-}
-.three-steps-wrapper .step-card .step-frame svg path {
-  animation: switch-fill ease-in forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 .three-steps-wrapper .step-card .step-frame h6 {
   padding-top: 20px;
