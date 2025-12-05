@@ -1,6 +1,5 @@
 // adds mixins for buttons //
 @use "mixins" as *;
-
 // put all styling that both buttons have together in here //
 .wp-block-button__link {
   @include transition();
@@ -207,7 +206,7 @@
     width: 100%;
     .wp-block-button {
       @include transition(all, 400);
-      max-width: 100%;
+      max-width: var(--wp--style--global--content-size);
       width: 250px;
       a {
         @include transition(all, 400);
@@ -243,7 +242,9 @@
         @include transition(all, 400);
         width: 100%;
         @media (max-width: 1440px) {
-          width: 93.6%;
+          box-sizing: border-box;
+          padding-right: 2rem;
+          padding-left: 2rem;
         }
         a {
           @include transition(all, 400);
@@ -261,7 +262,6 @@
   }
   .fixed-cc-content {
     margin-top: 0;
-    // width: 100vw !important;
     width: 100%;
     max-width: 100%;
     height: 75vh;
@@ -286,7 +286,10 @@
       }
     }
     @media (max-width: 1440px) {
-      width: 93.6%;
+      box-sizing: border-box;
+      max-width: var(--wp--style--global--content-size);
+      padding-right: 2rem;
+      padding-left: 2rem;
       li .wp-container-core-group-is-layout-6c531013 {
         .fixed-cc-img img {
           height: 80px;

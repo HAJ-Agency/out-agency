@@ -226,7 +226,7 @@
 }
 .fixed-cc-wrapper .fixed-button .wp-block-button {
   transition: all 400ms linear;
-  max-width: 100%;
+  max-width: var(--wp--style--global--content-size);
   width: 250px;
 }
 .fixed-cc-wrapper .fixed-button .wp-block-button a {
@@ -268,7 +268,9 @@
 }
 @media (max-width: 1440px) {
   .fixed-cc-wrapper .fixed-button:hover .wp-block-button, .fixed-cc-wrapper .fixed-button.is-open .wp-block-button {
-    width: 93.6%;
+    box-sizing: border-box;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 .fixed-cc-wrapper .fixed-button:hover .wp-block-button a, .fixed-cc-wrapper .fixed-button.is-open .wp-block-button a {
@@ -306,7 +308,10 @@
 }
 @media (max-width: 1440px) {
   .fixed-cc-wrapper .fixed-cc-content {
-    width: 93.6%;
+    box-sizing: border-box;
+    max-width: var(--wp--style--global--content-size);
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
   .fixed-cc-wrapper .fixed-cc-content li .wp-container-core-group-is-layout-6c531013 .fixed-cc-img img {
     height: 80px;
