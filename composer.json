@@ -7,8 +7,7 @@
         "files": [
             "includes/hooks/actions.php",
             "includes/hooks/filters.php",
-            "includes/cpt/init.php",
-            "includes/api/hapi.php",
+            "includes/cpt/init.php",            
             "includes/functions/post-type.php",
             "includes/block-styles/core-button.php",
             "includes/shortcodes/shortcodes.php"

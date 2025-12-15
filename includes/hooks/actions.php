@@ -236,21 +236,6 @@ function extend_block_assets() {
    }
 }
 
-/**
- * Wordpress Init action
- */
-add_action('init', __NAMESPACE__ . '\out_theme_init');
-
-function out_theme_init() {
-   // Register custom blocks (A - Z)
-   register_block_type(get_stylesheet_directory() . '/build/blocks/post-archive');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/scrollbar-slider');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/search');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/slider');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/slider-item');
-}
-
-
 add_action('init', __NAMESPACE__ . '\rename_default_post_type', 100);
 
 function rename_default_post_type() {
