@@ -7,6 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'INCLUDES\\CPT\\Services' => $baseDir . '/includes/cpt/Services.php',
-    'INCLUDES\\CPT\\Workations' => $baseDir . '/includes/cpt/Workations.php',
 );

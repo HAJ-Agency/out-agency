@@ -8,7 +8,7 @@ namespace Out\Includes\Hooks;
  * @see https://developers.google.com/speed/libraries#jquery
  * @since 1.0.0
  */
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets', 1);
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\out_enqueue_assets', 99, 0);
 
 function out_enqueue_assets() {
    wp_enqueue_style(
@@ -54,13 +54,6 @@ function out_enqueue_assets() {
       filemtime(get_stylesheet_directory() . '/build/assets/css/case-blocks.css')
    );
    wp_enqueue_script(
-      'jquery',
-      'https://code.jquery.com/jquery-3.7.1.min.js',
-      [],
-      '1.0',
-      true
-   );
-   wp_enqueue_script(
       'formidable-ext',
       get_stylesheet_directory_uri() . '/build/assets/js/formidable.ext.js',
       ['jquery'],
@@ -85,17 +78,20 @@ function out_enqueue_assets() {
       get_stylesheet_directory_uri() . '/build/assets/js/header.js',
       ['jquery'],
       filemtime(get_stylesheet_directory() . '/build/assets/js/header.js'),
-      array(
+      [
          'strategy'  => 'defer',
          'in_footer' => true,
-      )
+      ]
    );
    wp_register_script(
       'jquery-ui-cdn',
       'https://code.jquery.com/ui/1.14.1/jquery-ui.min.js',
       ['jquery'],
       '1.14.1',
-      true
+      array(
+         'strategy'  => 'defer',
+         'in_footer' => true,
+      )
    );
    wp_register_style(
       'jquery-ui-css',
@@ -109,7 +105,10 @@ function out_enqueue_assets() {
       get_stylesheet_directory_uri() . '/build/assets/js/modal.js',
       ['jquery', 'jquery-ui-cdn'],
       '',
-      true
+      array(
+         'strategy'  => 'defer',
+         'in_footer' => true,
+      )
    );
 
    wp_enqueue_script(
@@ -117,7 +116,10 @@ function out_enqueue_assets() {
       get_stylesheet_directory_uri() . '/build/assets/js/accordion-button.js',
       ['jquery', 'jquery-ui-cdn'],
       '',
-      true
+      array(
+         'strategy'  => 'defer',
+         'in_footer' => true,
+      )
    );
 }
 
@@ -159,6 +161,7 @@ function out_enqueue_admin_assets() {
 }
 
 add_action('enqueue_block_assets', __NAMESPACE__ . '\extend_block_assets');
+
 function extend_block_assets() {
    $is_gutenberg_editor = is_admin() && get_current_screen()->is_block_editor();
 
@@ -233,20 +236,6 @@ function extend_block_assets() {
    }
 }
 
-/**
- * Wordpress Init action
- */
-add_action('init', __NAMESPACE__ . '\out_theme_init');
-function out_theme_init() {
-   // Register custom blocks (A - Z)
-   register_block_type(get_stylesheet_directory() . '/build/blocks/post-archive');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/scrollbar-slider');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/search');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/slider');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/slider-item');
-}
-
-
 add_action('init', __NAMESPACE__ . '\rename_default_post_type', 100);
 
 function rename_default_post_type() {
@@ -276,13 +265,17 @@ function remove_comment_support() {
    remove_post_type_support('post', 'comments');
    remove_post_type_support('page', 'comments');
 }
+
 add_filter('comments_open',  '__return_false', 20, 2);
 add_filter('pings_open', '__return_false', 20, 2);
 add_action('admin_menu', __NAMESPACE__ . '\remove_comments_admin_menu');
+
 function remove_comments_admin_menu() {
    remove_menu_page('edit-comments.php');
 }
+
 add_action('admin_bar_menu', __NAMESPACE__ . '\remove_comments_admin_bar', 999);
+
 function remove_comments_admin_bar($wp_admin_bar) {
    $wp_admin_bar->remove_node('comments');
 }

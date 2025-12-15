@@ -4,8 +4,7 @@
 @media (max-width: 1440px) {
   .content-margin-mobile,
   .background-img .wp-block-cover__inner-container,
-  .contact-us-background .wp-block-cover__inner-container,
-  .three-steps-wrapper .wp-block-group {
+  .contact-us-background .wp-block-cover__inner-container {
     margin-right: 32px !important;
     margin-left: 32px !important;
 
@@ -50,7 +49,9 @@
 }
 
 .wp-block-image img {
-  border-radius: 8px;
+  // border-radius: 8px;
+  // margin-top: 1.5rem;
+  vertical-align: unset;
 }
 
 .style-svg img {
@@ -254,9 +255,9 @@
   .service-archive-mobile {
     display: block !important;
     img {
+      aspect-ratio: 16/9;
       border-radius: 8px;
       width: 100vw;
-      height: 512px;
       object-fit: cover;
     }
     .read-more-wrapper {
@@ -433,6 +434,22 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 // SCSS for scroll animation for three steps //
 @keyframes switch-color {
   from {
@@ -465,7 +482,6 @@
   }
 }
 
-
 @keyframes switch-fill {
   from {
     fill: #ffffff;
@@ -474,40 +490,58 @@
     fill: #111111;
   }
 }
-
+.ellipse-background {
+  position: relative;
+  h6 {
+    animation: switch-heading-color ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  figure {
+    animation-range: entry 0% cover 40%;
+    animation-timeline: view() !important;
+    height: 100px;
+    position: absolute;
+    width: 140px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    &.ellipsis {
+      &-black {
+        animation: fade-in;
+      }
+      &-white {
+        animation: fade-out;
+      }
+    }
+  }
+  height: 100px;
+  width: 100%;
+}
 // SCSS for three steps part of startpage //
 .three-steps-wrapper {
   animation: switch-color ease-in forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  padding-right: 2rem;
+  padding-left: 2rem;
   h2 {
     color: inherit;
   }
   .step-card {
     color: #ffffff;
-    width: 437px;
-    height: 437px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation: switch-color2 ease-in forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+
+    .wp-block-cover img {
+      object-fit: contain;
+    }
     .step-frame {
       display: flex;
       flex-direction: column;
       align-items: center;
-      svg {
-        width: 106px !important;
-        height: 60px !important;
-        margin: auto !important;
-        path {
-          animation: switch-fill ease-in forwards;
-          animation-timeline: view();
-          animation-range: entry 0% cover 40%;
-        }
-      }
       h6 {
         padding-top: 20px;
         animation: switch-heading-color ease-in forwards;
@@ -533,14 +567,27 @@
   }
   @media (max-width: 900px) {
     animation-range: entry 0% cover 20%;
+
+    .ellipse-background {
+      animation: none;
+      figure {
+        &.ellipsis-black {
+          opacity: 0;
+        }
+        &.ellipsis-white {
+          opacity: 1;
+        }
+      }
+      h6 {
+        animation: none !important;
+        color: #ffffff;
+      }
+    }
+
     .wp-block-columns {
-      display: block !important;
       .step-card {
         margin: auto !important;
         margin-bottom: 16px !important;
-        h6 {
-          padding-top: 10px;
-        }
       }
     }
     @media (max-width: 700px) {
@@ -549,6 +596,7 @@
         animation: none;
         background-color: #111111;
         color: #ffffff;
+
         h4 {
           color: #ffffff;
           animation: none;
@@ -628,19 +676,26 @@
 .about-individual-wrapper {
   position: relative;
   .about-individual {
-    height: 512px;
-    position: relative;
+    .wp-block-cover__inner-container {
+      z-index: 3;
+    }
     .about-individual-hover {
+      @include transition;
       height: 512px;
       max-height: 512px;
       opacity: 0;
       z-index: 3;
-      @include transition;
+      .wp-block-columns {
+        margin-top: auto;
+        .wp-block-column {
+          padding: 10px !important;
+        }
+      }
     }
     &:hover {
       .about-individual-hover {
-        opacity: 1;
         @include transition;
+        opacity: 1;
       }
     }
   }
@@ -649,6 +704,22 @@
     left: 32px;
     bottom: 32px;
     z-index: 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-individual-hover {
+    padding: 1rem !important;
+    .contact-us-info {
+      figure {
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+    .wp-block-columns {
+      gap: 1rem !important;
+    }
   }
 }
 
@@ -762,7 +833,7 @@
       display: flex;
       justify-content: center;
     }
-    
+
     .wp-block-image img {
       margin: 0 auto;
     }
@@ -775,7 +846,7 @@
       object-fit: cover;
     }
   }
-  
+
   .image-gallery-column2 {
     figure {
       &:nth-child(1),
@@ -795,7 +866,7 @@
       }
     }
   }
-  
+
   .image-gallery-column3 {
     img {
       width: 437px;
@@ -805,3 +876,19 @@
   }
 }
 
+@media (min-width: 900px) {
+  .show-desktop-only {
+    display: block;
+  }
+  .show-mobile-only {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .show-desktop-only {
+    display: none;
+  }
+  .show-mobile-only {
+    display: block;
+  }
+}

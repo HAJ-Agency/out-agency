@@ -9,7 +9,6 @@ return array(
     '74d0081ff38dea39b8d70ed505abf5e4' => $baseDir . '/includes/hooks/actions.php',
     '962f56b144996815ae170597d7e9064c' => $baseDir . '/includes/hooks/filters.php',
     '273b9a1b1188ffaf8b3f1941011abe4f' => $baseDir . '/includes/cpt/init.php',
-    '5a9cd293f3a8f6aafcaf3f7927e6cdf3' => $baseDir . '/includes/api/hapi.php',
     'e74702d7506425c5b0990da61f370c5f' => $baseDir . '/includes/functions/post-type.php',
     'c4efd6b11d9a959211ece3c76c1f73d2' => $baseDir . '/includes/block-styles/core-button.php',
     'c9347e1d5fd752b845796fbc789cfbb4' => $baseDir . '/includes/shortcodes/shortcodes.php',

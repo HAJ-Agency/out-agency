@@ -10,7 +10,6 @@ class ComposerStaticInit8d070178755c320c69f93ee4800660ef
         '74d0081ff38dea39b8d70ed505abf5e4' => __DIR__ . '/../..' . '/includes/hooks/actions.php',
         '962f56b144996815ae170597d7e9064c' => __DIR__ . '/../..' . '/includes/hooks/filters.php',
         '273b9a1b1188ffaf8b3f1941011abe4f' => __DIR__ . '/../..' . '/includes/cpt/init.php',
-        '5a9cd293f3a8f6aafcaf3f7927e6cdf3' => __DIR__ . '/../..' . '/includes/api/hapi.php',
         'e74702d7506425c5b0990da61f370c5f' => __DIR__ . '/../..' . '/includes/functions/post-type.php',
         'c4efd6b11d9a959211ece3c76c1f73d2' => __DIR__ . '/../..' . '/includes/block-styles/core-button.php',
         'c9347e1d5fd752b845796fbc789cfbb4' => __DIR__ . '/../..' . '/includes/shortcodes/shortcodes.php',
@@ -32,8 +31,6 @@ class ComposerStaticInit8d070178755c320c69f93ee4800660ef
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'INCLUDES\\CPT\\Services' => __DIR__ . '/../..' . '/includes/cpt/Services.php',
-        'INCLUDES\\CPT\\Workations' => __DIR__ . '/../..' . '/includes/cpt/Workations.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

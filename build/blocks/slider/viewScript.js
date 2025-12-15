@@ -1,1 +1,0 @@
-(()=>{var e;(e=jQuery)(function(){e(".tiburon-slider").each(function(n,t){const i=e(t);i.find(".swiper-wrapper"),new Swiper(i[0],{effect:"fade",fadeEffect:{crossFade:!0},loop:!0,navigation:{nextEl:i.find(".swiper-button-next-custom")[0],prevEl:i.find(".swiper-button-prev-custom")[0]}})})})})();

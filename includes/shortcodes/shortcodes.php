@@ -70,7 +70,7 @@ function pinned_case_overlay_callback() {
     <figure class="wp-block-image aligncenter size-large is-resized" style="margin-top:0;margin-bottom:0"><img decoding="async" width="624" height="4" src="http://out.local/wp-content/uploads/2025/09/contact-us-divider.svg" alt="" class="wp-image-388" style="width:576px"></figure>
     <div class="wp-block-columns are-vertically-aligned-top is-layout-flex wp-container-core-columns-is-layout-54ff4114 wp-block-columns-is-layout-flex" style="padding-right:var(--wp--preset--spacing--1);padding-left:var(--wp--preset--spacing--1)">
         <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow">
-            <?= $columnOne ?>            
+            <?= $columnOne ?>
         </div>
         <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow">
             <?= $columnTwo ?>
@@ -79,6 +79,39 @@ function pinned_case_overlay_callback() {
             <?= $columnThree ?>
         </div>
     </div>
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode("read_more_button", function () {
+    ob_start();
+    $kundcase_id = get_the_ID();
+    $title = get_the_title($kundcase_id) ?: "Ingen titel";
+    $href = get_the_permalink($kundcase_id) ?: "#";
+    $show_button = get_field('visa_knapp', $kundcase_id);
+    if ($show_button && $title) : ?>
+        <a class="read-more-cc wp-block-read-more"
+            href="<?php echo esc_url($href); ?>"
+            target="_self">
+            LÄS MER
+            <span class="screen-reader-text">: <?php echo esc_html($title); ?></span>
+        </a>
+    <?php
+    endif;
+    return ob_get_clean();
+});
+
+add_shortcode('display_kundcase_logo', __NAMESPACE__ . "\display_kundcase_logo_callback");
+
+function display_kundcase_logo_callback() {
+    ob_start();
+    $kundcase_id = get_the_ID();
+    $image_url = get_field('overlay_logo', $kundcase_id);
+    if (!$image_url) {
+        $image_url = '/wp-content/uploads/2025/09/OUT-footer.svg';
+    }
+    ?>
+    <img src="<?php echo esc_url($image_url); ?>" alt="" style="width:100px">
 <?php
     return ob_get_clean();
 }
