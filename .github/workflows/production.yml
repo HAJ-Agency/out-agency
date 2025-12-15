@@ -21,7 +21,7 @@ jobs:
               remote-user: outagenc
               private-ssh-key: ${{ secrets.ID_ACTIONS }}
               destination-path: /home/outagenc/public_html/wp-content/themes/out/
-              rsync-options: --dry-run --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
+              rsync-options: --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
 
          - name: ✅ Done
            run: echo "Deployment to outagency.se complete!"
