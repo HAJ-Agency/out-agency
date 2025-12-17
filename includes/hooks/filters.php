@@ -53,6 +53,7 @@ add_filter('script_loader_tag', function ($tag, $handle) {
 	}
 	return $tag;
 }, 10, 2);
+
 add_filter('style_loader_tag', function ($tag, $handle) {
 	$defer_styles = ['global-css', 'header-css', 'footer-css', 'datatables-style'];
 	if (in_array($handle, $defer_styles)) {
@@ -62,6 +63,7 @@ add_filter('style_loader_tag', function ($tag, $handle) {
 }, 10, 2);
 
 add_filter('render_block', __NAMESPACE__ . '\modify_button_block_structure', 10, 2);
+
 function modify_button_block_structure($block_content, $block) {
 
 	if ($block['blockName'] === 'core/button') {
@@ -73,6 +75,7 @@ function modify_button_block_structure($block_content, $block) {
 }
 
 add_filter('render_block', __NAMESPACE__ . '\group_block_link_ext', 10, 2);
+
 function group_block_link_ext($block_content, $block) {
 	// Wrap the block content with a custom link
 	if (isset($block['attrs']['groupLink']) && $block['attrs']['groupLink']) {
@@ -125,6 +128,7 @@ function group_block_link_ext($block_content, $block) {
 }
 
 add_filter('render_block', __NAMESPACE__ . '\columns_block_fix_column_divider_position', 10, 2);
+
 function columns_block_fix_column_divider_position($block_content, $block) {
 	if ($block['blockName'] === 'core/columns' && !empty($block['attrs']['hasColumnDivider'])) {
 		// Try to extract the spacing token from blockGap
@@ -164,6 +168,7 @@ function columns_block_fix_column_divider_position($block_content, $block) {
 
 // Custom gutenberg block categories
 add_filter('block_categories_all', __NAMESPACE__ . '\tiburon_block_category');
+
 function tiburon_block_category($categories) {
 	return array_merge(
 		$categories,
